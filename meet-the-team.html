@@ -9,44 +9,40 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <style>
-        .card {
+        .team-section {
+            padding: 2rem;
+        }
+
+        .team-card {
             border: 2px solid #28a745;
-            background-color: white;
+            background-color: #ffffff;
         }
 
-        .card-body {
-            text-align: center;
-            color: #28a745;
-        }
-
-        .card-title {
-            font-weight: bold;
-            font-size: 1.25em;
-            color: #28a745;
-        }
-
-        .card-text {
-            font-size: 1em;
+        .team-card .card-title,
+        .team-card .card-text {
             color: #28a745;
         }
 
         h2 {
             color: #28a745;
+            text-align: center;
+            margin-bottom: 1.5rem;
         }
 
         .footer {
             background-color: #28a745;
             color: white;
+            padding: 1rem;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-success">
+    <nav class="navbar navbar-expand-lg navbar-success bg-success">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images/navbar-logo.png" style="width: 110px; height: 50px;">
+                <img src="images/navbar-logo.png" alt="Logo" style="width: 110px; height: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,16 +51,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html" style="color: white; font-size: large;"><b>Home</b></a>
+                        <a class="nav-link text-white" href="index.html"><b>Home</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="meet-the-team.html" style="color: white; font-size: large;">Meet the Team</a>
+                        <a class="nav-link text-white" href="meet-the-team.html">Meet the Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="resources.html" style="color: white; font-size: large;">Team Resources</a>
+                        <a class="nav-link text-white" href="resources.html">Team Resources</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gallery.html" style="color: white; font-size: large;">Gallery</a>
+                        <a class="nav-link text-white" href="gallery.html">Gallery</a>
                     </li>
                 </ul>
             </div>
@@ -72,12 +68,12 @@
     </nav>
 
     <!-- Meet the Team Section -->
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Meet the Team</h2>
+    <section class="container team-section">
+        <h2>Meet the Team</h2>
         <div class="row">
-            <!-- Team Member Card 1 -->
+            <!-- Team Member Cards -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member1.jpg" class="card-img-top" alt="John Doe">
                     <div class="card-body">
                         <h5 class="card-title">John Doe</h5>
@@ -85,9 +81,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member Card 2 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member2.jpg" class="card-img-top" alt="Jane Smith">
                     <div class="card-body">
                         <h5 class="card-title">Jane Smith</h5>
@@ -95,9 +90,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member Card 3 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member3.jpg" class="card-img-top" alt="Rajveer Dharkar">
                     <div class="card-body">
                         <h5 class="card-title">Rajveer Dharkar</h5>
@@ -105,9 +99,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member Card 4 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member4.jpg" class="card-img-top" alt="Alex Brown">
                     <div class="card-body">
                         <h5 class="card-title">Alex Brown</h5>
@@ -115,9 +108,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member Card 5 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member5.jpg" class="card-img-top" alt="Emily White">
                     <div class="card-body">
                         <h5 class="card-title">Emily White</h5>
@@ -125,9 +117,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member Card 6 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member6.jpg" class="card-img-top" alt="Michael Green">
                     <div class="card-body">
                         <h5 class="card-title">Michael Green</h5>
@@ -135,9 +126,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member Card 7 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member7.jpg" class="card-img-top" alt="Sophia Blue">
                     <div class="card-body">
                         <h5 class="card-title">Sophia Blue</h5>
@@ -145,9 +135,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member Card 8 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member8.jpg" class="card-img-top" alt="Liam Red">
                     <div class="card-body">
                         <h5 class="card-title">Liam Red</h5>
@@ -155,9 +144,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member Card 9 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card team-card text-center">
                     <img src="images/member9.jpg" class="card-img-top" alt="Olivia Gray">
                     <div class="card-body">
                         <h5 class="card-title">Olivia Gray</h5>
@@ -169,7 +157,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer text-white text-center py-3">
+    <footer class="footer text-center">
         <p>Contact us over email: alpineroboticsftc@gmail.com</p>
     </footer>
 
