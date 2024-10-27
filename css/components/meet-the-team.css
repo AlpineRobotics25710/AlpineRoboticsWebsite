@@ -1,0 +1,19 @@
+.team-section {
+    padding: 2rem;
+}
+
+.team-card {
+    border: 2px solid #28a745;
+    background-color: #ffffff;
+}
+
+.team-card .card-title,
+.team-card .card-text {
+    color: #28a745;
+}
+
+h2 {
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
