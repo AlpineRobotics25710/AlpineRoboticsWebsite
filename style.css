@@ -52,65 +52,13 @@
     gap: 20px;
 }
 
-/* Card container styling */
-.card-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Individual card styling */
-.card {
-    width: 480px;
-    height: 220px;
-    padding: 15px;
-    background: rgba(66, 175, 64, 0.74);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Card title styling */
-.card-title {
-    text-align: center;
-    color: white;
-    font-size: 36px;
-    font-family: Inter, sans-serif;
-    font-weight: 700;
-}
-
-/* Card subtitle styling */
-.card-subtitle {
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    font-family: Inter, sans-serif;
-    font-style: italic;
-    font-weight: 400;
-}
-
-/* Button styling */
-.card-button {
-    height: 44px;
-    padding: 6px 32px;
-    background: white;
-    color: #286629;
-    font-size: 16px;
-    font-family: Inter, sans-serif;
-    font-weight: 700;
-    border-radius: 6px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.card-bg {
+    background-color: #286629;
 }
 
 .footer {
     width: 100%;
-    height: 112px;
+    height: 75px;
     padding: 39px 535px;
     background: #286629;
     border-top: 1px black solid;
