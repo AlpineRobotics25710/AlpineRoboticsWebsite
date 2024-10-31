@@ -1,0 +1,69 @@
+.banner {
+    width: 100%;
+    height: 992px;
+    background-image: url("../images/banner.png");
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    flex-direction: column;
+}
+
+.banner__header {
+    color: white;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.banner__subheader {
+    color: white;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.banner__btn {
+    padding: 15px;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.mission-statement {
+    width: 100%;
+    height: 548px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex"
+}
+
+.mission-statement__text {
+    color: #286629; 
+    font-size: 36px; 
+    font-family: Gabarito; 
+    font-weight: 500; 
+    line-height: 48px; 
+    word-wrap: break-word;
+}
+
+/* Main container styling */
+.meet-the-team {
+    width: 100%;
+    height: 461px;
+    padding: 47px 59px;
+    background: #0A4809;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-bg {
+    background-color: #286629;
+}
