@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alpine Robotics - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Resources</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/resources.css" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0RD2S0XPZ"></script>
@@ -20,12 +21,12 @@
     </script>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-success">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images/NavBarLogo.png" style="width: 110px; height: 50px;">
+                <img src="images/navbar-logo.png" style="width: 110px; height: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,9 +37,11 @@
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="index.html">Home</a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <!--
+                    <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="meet-the-team.html">Meet the Team</a>
-                    </li> -->
+                    </li>
+                    -->
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" href="resources.html"><b>Team Resources</b></a>
                     </li>
@@ -50,48 +53,69 @@
         </div>
     </nav>
 
-    <h1 class="title">Team Resources</h1>
-
-    <!-- Resources Cards -->
-    <div class="container resources-section">
+    <div class="container mt-5 flex-grow-1">
+        <h1 class="text-center mb-5">Team Resources</h1>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card resources-card text-center">
-                    <img src="images/resources1.jpg" class="card-img-top" alt="Resources 1">
                     <div class="card-body">
-                        <h5 class="card-title">Resource 1</h5>
-                        <p class="card-text">Description of Resource 1</p>
-                        <a href="#" class="btn btn-success">Download</a>
+                        <h5 class="card-title">Team Drive</h5>
+                        <p class="card-text">Our team's hub for collaboration and innovation</p>
+                        <a href="https://drive.google.com/drive/folders/1j84cbPxsHvj-K1e1iQsM9-BEFxDtNMmu?usp=drive_link" class="btn btn-success" target="_blank">Go There!</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card resources-card text-center">
-                    <img src="images/resources2.jpg" class="card-img-top" alt="Resources 2">
                     <div class="card-body">
-                        <h5 class="card-title">Resource 2</h5>
-                        <p class="card-text">Description of Resource 2</p>
-                        <a href="#" class="btn btn-success">Download</a>
+                        <h5 class="card-title">Competition Manual</h5>
+                        <p class="card-text">Information all about this year's game</p>
+                        <a href="https://ftc-resources.firstinspires.org/file/ftc/game/manual" class="btn btn-success" target="_blank">Go There!</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card resources-card text-center">
-                    <img src="images/resources2.jpg" class="card-img-top" alt="Resources 2">
                     <div class="card-body">
-                        <h5 class="card-title">Resource 2</h5>
-                        <p class="card-text">Description of Resource 2</p>
-                        <a href="#" class="btn btn-success">Download</a>
+                        <h5 class="card-title">Team Flyer</h5>
+                        <p class="card-text">Important information about our team, including sponsorship info!</p>
+                        <a href="resources/Alpine Robotics Flyer(Updated).pdf" class="btn btn-success" download="team-flyer.pdf">Download!</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card resources-card text-center">
-                    <img src="images/resources2.jpg" class="card-img-top" alt="Resources 2">
                     <div class="card-body">
-                        <h5 class="card-title">Resource 2</h5>
-                        <p class="card-text">Description of Resource 2</p>
-                        <a href="#" class="btn btn-success">Download</a>
+                        <h5 class="card-title">Shooter Capabilities Presentation</h5>
+                        <p class="card-text">Learn all about shooter mechanisms in FTC!</p>
+                        <a href="https://docs.google.com/presentation/d/1Q9Z1Pg1k1uS1UjedBDWzgC4dhX_0nMwdUeeaEbygAQc/edit?usp=sharing" class="btn btn-success" target="_blank">Go There!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card resources-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Hub Spreasheet</h5>
+                        <p class="card-text">Our team's main spreadsheet/tracker</p>
+                        <a href="https://docs.google.com/spreadsheets/d/1zZPpN1vDam8ZBoUv1OfmriJNMRDYwcuTk-cIUj3Y0cI/edit?gid=745969028#gid=745969028" class="btn btn-success" target="_blank">Go There!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card resources-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Finances Spreasheet</h5>
+                        <p class="card-text">Our team's finances</p>
+                        <a href="https://docs.google.com/spreadsheets/d/11eFE3iPvyBCAz6dLU1Q-LWp19n5fdD7eq2d5L1JvEDk/edit?gid=745969028#gid=745969028" class="btn btn-success" target="_blank">Go There!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card resources-card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Lions Club Outreach Presentation</h5>
+                        <p class="card-text">Our presentation for the Lion's Club outreach</p>
+                        <a href="https://docs.google.com/presentation/d/1318qldY_MnDDUGoqrg8e-OViC-Gxemi5/edit#slide=id.p1" class="btn btn-success" target="_blank">Go There!</a>
                     </div>
                 </div>
             </div>
@@ -99,12 +123,13 @@
     </div>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer class="footer mt-auto py-3">
         <div class="footer-text">Contact us over email: alpineroboticsftc@gmail.com</div>
-    </div>
+    </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
