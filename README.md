@@ -1,4 +1,4 @@
-<h1>Welcome!<h1>
+<h1>Welcome!</h1>
 This repository is for the website of FIRST Tech Challenge Team #25710 Alpine Robotics!</h1>
 
 Here, you can find the source code that we used to build this site.
