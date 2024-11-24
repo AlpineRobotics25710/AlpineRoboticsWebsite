@@ -4,6 +4,10 @@
     color: #286629;
 }
 
+.navbar {
+    background-color: #15803d;
+}
+
 .title {
     align-self: stretch;
     margin-top: 15px;
@@ -29,7 +33,6 @@
     background: #15803d;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid darkslategray;
     display: flex;
 }
 
