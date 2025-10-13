@@ -1,0 +1,63 @@
+body {
+    background-color: #f3faf4;
+}
+
+.gallery-heading {
+    margin: 3rem auto;
+    color: #14532d;
+}
+
+.gallery-wrapper {
+    padding-bottom: 5rem;
+}
+
+.gallery-event {
+    background: linear-gradient(135deg, #15803d, #0f5132);
+    border-radius: 1.8rem;
+    padding: 3rem 1.75rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    color: #ffffff;
+}
+
+.gallery-event__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(2rem, 2vw + 1.5rem, 2.75rem);
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+}
+
+.gallery-event__description {
+    max-width: 60rem;
+    margin: 0 auto 2.5rem;
+    color: #f3faf4;
+    font-size: clamp(1rem, 1vw + 0.9rem, 1.25rem);
+    line-height: 1.6;
+}
+
+.gallery-event__images .col {
+    display: flex;
+}
+
+.gallery-event__image {
+    width: 100%;
+    border-radius: 1.25rem;
+    border: 4px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+.gallery-event__image:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s ease;
+}
+
+@media (max-width: 767.98px) {
+    .gallery-event {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .gallery-event__description {
+        margin-bottom: 2rem;
+    }
+}

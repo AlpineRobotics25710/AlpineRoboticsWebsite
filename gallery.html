@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,10 +23,10 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="./images/NavBarLogo.png" class="m-1 ms-3" style="width: 110px; height: 50px;">
+                <img src="./images/NavBarLogo.png" class="m-1 ms-3" alt="Alpine Robotics logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,123 +51,96 @@
         </div>
     </nav>
 
-    <h1 class="title m-5">Gallery</h1>
+    <main class="gallery-wrapper container py-4 py-md-5">
+        <h1 class="title gallery-heading text-center">Gallery</h1>
 
-    <div class="container">
         <!-- Event 1 -->
-        <div class="container text-center bg-success mb-5 rounded-4">
-            <h2 class="p-4 fs-1 mb-2 text-white"><b>Mercer County Fair 2024 </b></h2>
-            <h3 class="fs-5 text-white" style="padding-left: 10vw; padding-right: 8.5vw;">
-                At the Mercer County Fair, we showcased our team, shared our experience and knowledge about robotics programs in FIRST(FLL, FTC, FRC), and taught about 3D printing, connecting with over 1,000 attendees.</h3>
-            <div class="row gy-5 p-4 pb-5">
-                <div class="col-4">
-                    <img src="images/galleryImages/MercerCountyFair/Fair1.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Mercer County Fair Image 1">
+        <section class="gallery-event text-center">
+            <h2 class="gallery-event__title">Mercer County Fair 2024</h2>
+            <p class="gallery-event__description">
+                At the Mercer County Fair, we showcased our team, shared our experience and knowledge about robotics programs in FIRST (FLL, FTC, FRC), and taught about 3D printing, connecting with over 1,000 attendees.
+            </p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 gallery-event__images">
+                <div class="col">
+                    <img src="images/galleryImages/MercerCountyFair/Fair1.jpg" class="img-fluid gallery-event__image" alt="Mercer County Fair Image 1">
                 </div>
-                <div class="col-4">
-                    <img src="images\galleryImages\MercerCountyFair/Fair2.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Mercer County Fair Image 2">
+                <div class="col">
+                    <img src="images/galleryImages/MercerCountyFair/Fair2.jpg" class="img-fluid gallery-event__image" alt="Mercer County Fair Image 2">
                 </div>
-                <div class="col-4">
-                    <img src="images\galleryImages\MercerCountyFair/Fair3.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Mercer County Fair Image 3">
+                <div class="col">
+                    <img src="images/galleryImages/MercerCountyFair/Fair3.jpg" class="img-fluid gallery-event__image" alt="Mercer County Fair Image 3">
                 </div>
-                <div class="col-2"> <img src="" alt="" style="display: hidden;"> </div>
-                <div class="col-3">
-                    <img src="images\galleryImages\MercerCountyFair/Fair4.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Mercer County Fair Image 4">
+                <div class="col">
+                    <img src="images/galleryImages/MercerCountyFair/Fair4.jpg" class="img-fluid gallery-event__image" alt="Mercer County Fair Image 4">
                 </div>
-                <div class="col-2"> </div>
-                <div class="col-3">
-                    <img src="images\galleryImages\MercerCountyFair/Fair5.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Mercer County Fair Image 5">
+                <div class="col">
+                    <img src="images/galleryImages/MercerCountyFair/Fair5.jpg" class="img-fluid gallery-event__image" alt="Mercer County Fair Image 5">
                 </div>
-                <div class="col-2"> </div>
-
             </div>
-        </div>
+        </section>
 
         <!-- Event 2 -->
-        <div class="container text-center bg-success mb-5 rounded-4">
-            <h2 class="p-4 fs-1 mb-2 text-white"><b>NJ Leep Outreach - Newark</b></h2>
-            <h3 class="fs-5 text-white" style="padding-left: 10vw; padding-right: 6.5vw;"> We partnered with NJ LEEP to visit low-income middle and high school students in Newark, sharing about our team, showcasing our robot, and introducing them to FTC, other FIRST programs, and STEM opportunities. </h3>
-            <div class="row gy-5 p-4">
+        <section class="gallery-event text-center">
+            <h2 class="gallery-event__title">NJ LEEP Outreach — Newark</h2>
+            <p class="gallery-event__description">
+                We partnered with NJ LEEP to visit low-income middle and high school students in Newark, sharing about our team, showcasing our robot, and introducing them to FTC, other FIRST programs, and STEM opportunities.
+            </p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 gallery-event__images">
                 <div class="col">
-                    <img src="images/galleryImages/NJLeepOutreach/NJLeep1.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="NJ Leep Outreach Image 1">
+                    <img src="images/galleryImages/NJLeepOutreach/NJLeep1.jpg" class="img-fluid gallery-event__image" alt="NJ LEEP Outreach Image 1">
                 </div>
                 <div class="col">
-                    <img src="images/galleryImages/NJLeepOutreach/NJLeep3.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="NJ Leep Outreach Image 3">
+                    <img src="images/galleryImages/NJLeepOutreach/NJLeep2.jpg" class="img-fluid gallery-event__image" alt="NJ LEEP Outreach Image 2">
                 </div>
                 <div class="col">
-                    <img src="images/galleryImages/NJLeepOutreach/NJLeep4.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="NJ Leep Outreach Image 4">
+                    <img src="images/galleryImages/NJLeepOutreach/NJLeep3.jpg" class="img-fluid gallery-event__image" alt="NJ LEEP Outreach Image 3">
                 </div>
                 <div class="col">
-                    <img src="images/galleryImages/NJLeepOutreach/NJLeep5.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="NJ Leep Outreach Image 5">
+                    <img src="images/galleryImages/NJLeepOutreach/NJLeep4.jpg" class="img-fluid gallery-event__image" alt="NJ LEEP Outreach Image 4">
+                </div>
+                <div class="col">
+                    <img src="images/galleryImages/NJLeepOutreach/NJLeep5.jpg" class="img-fluid gallery-event__image" alt="NJ LEEP Outreach Image 5">
+                </div>
+                <div class="col">
+                    <img src="images/galleryImages/NJLeepOutreach/NJLeep6.jpg" class="img-fluid gallery-event__image" alt="NJ LEEP Outreach Image 6">
+                </div>
+                <div class="col">
+                    <img src="images/galleryImages/NJLeepOutreach/NJLeep7.jpg" class="img-fluid gallery-event__image" alt="NJ LEEP Outreach Image 7">
                 </div>
             </div>
-            
-            <div class="row gy-5 p-4 pb-5">
-                <div class="col">
-                    <img src="images/galleryImages/NJLeepOutreach/NJLeep2.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="NJ Leep Outreach Image 2">
-                </div>
-                <div class="col">
-                    <img src="images/galleryImages/NJLeepOutreach/NJLeep6.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="NJ Leep Outreach Image 6">
-                </div>
-                <div class="col">
-                    <img src="images/galleryImages/NJLeepOutreach/NJLeep7.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="NJ Leep Outreach Image 7">
-                </div>
-            </div>
-        </div>
+        </section>
 
         <!-- Event 3 -->
-        <div class="container text-center bg-success mb-5 rounded-4">
-            <h2 class="p-4 fs-1 mb-2 text-white"><b>Robocon 2024 - Bridgewater Common Mall, New Jersey</b></h2>
-            <h3 class="fs-5 text-white" style="padding-left: 10vw; padding-right: 8.5vw;"> At RoboCon at the Bridgewater Mall, we explored the depths of FIRST robotics and FTC while sharing our rookie team experience and how we built our team from the ground up. </h3>
-            <div class="row gy-5 p-4">
+        <section class="gallery-event text-center">
+            <h2 class="gallery-event__title">Columbia Robocon — New York City</h2>
+            <p class="gallery-event__description">
+                We participated in Columbia Engineering's Robot Invitational, showcasing our robot, sharing our past accomplishments, and receiving revolutionary feedback from talented engineers and professors.
+            </p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 gallery-event__images">
                 <div class="col">
-                    <img src="images/galleryImages/Robocon/Robocon1.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Robocon Image 1">
+                    <img src="images/galleryImages/Robocon/Robocon1.jpg" class="img-fluid gallery-event__image" alt="Columbia Robocon Image 1">
                 </div>
                 <div class="col">
-                    <img src="images/galleryImages/Robocon/Robocon2.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Robocon Image 2">
+                    <img src="images/galleryImages/Robocon/Robocon2.jpg" class="img-fluid gallery-event__image" alt="Columbia Robocon Image 2">
                 </div>
                 <div class="col">
-                    <img src="images/galleryImages/Robocon/Robocon3.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Robocon Image 3">
+                    <img src="images/galleryImages/Robocon/Robocon3.jpg" class="img-fluid gallery-event__image" alt="Columbia Robocon Image 3">
                 </div>
                 <div class="col">
-                    <img src="images/galleryImages/Robocon/Robocon4.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Robocon Image 4">
-                </div>
-            </div>
-            
-            <div class="row gy-5 p-4 pb-5">
-                <div class="col">
-                    <img src="images/galleryImages/Robocon/Robocon5.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Robocon Image 5">
+                    <img src="images/galleryImages/Robocon/Robocon4.jpg" class="img-fluid gallery-event__image" alt="Columbia Robocon Image 4">
                 </div>
                 <div class="col">
-                    <img src="images/galleryImages/Robocon/Robocon6.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Robocon Image 6">
+                    <img src="images/galleryImages/Robocon/Robocon5.jpg" class="img-fluid gallery-event__image" alt="Columbia Robocon Image 5">
                 </div>
                 <div class="col">
-                    <img src="images/galleryImages/Robocon/Robocon7.jpg" class="img-fluid img-thumbnail p-0 rounded border-success-subtle border-5" alt="Robocon Image 7">
-                </div>
-            </div>
-        </div>
-
-        <!-- Event 4 -->
-        <!-- <div class="mb-4">
-            <h2>Event 4</h2>
-            <div class="row">
-                <div class="col">
-                    <img src="image1.jpg" class="img-fluid" alt="Event 1 Image 1">
+                    <img src="images/galleryImages/Robocon/Robocon6.jpg" class="img-fluid gallery-event__image" alt="Columbia Robocon Image 6">
                 </div>
                 <div class="col">
-                    <img src="image1.jpg" class="img-fluid" alt="Event 1 Image 1">
-                </div>
-                <div class="col">
-                    <img src="image1.jpg" class="img-fluid" alt="Event 1 Image 1">
-                </div>
-                <div class="col">
-                    <img src="image1.jpg" class="img-fluid" alt="Event 1 Image 1">
-                </div>
-                <div class="col">
-                    <img src="image1.jpg" class="img-fluid" alt="Event 1 Image 1">
+                    <img src="images/galleryImages/Robocon/Robocon7.jpg" class="img-fluid gallery-event__image" alt="Columbia Robocon Image 7">
                 </div>
             </div>
-        </div> -->
-    </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 sticky-bottom border-top border-2 border-light">
@@ -183,3 +156,4 @@
 </body>
 
 </html>
+
