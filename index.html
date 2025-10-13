@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,10 +23,10 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="./images/NavBarLogo.png" class="m-1 ms-3" style="width: 110px; height: 50px;">
+                <img src="./images/NavBarLogo.png" class="m-1 ms-3" alt="Alpine Robotics logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,35 +52,35 @@
     </nav>
 
     <!-- Banner -->
-    <div class="banner container-fluid" style="position: relative; z-index: 99999;">
-        <h1 class="banner__subheader">Welcome, we are...</h1>
+    <section class="banner">
+        <h2 class="banner__subheader">Welcome, we are...</h2>
         <h1 class="banner__header">Team #25710 <br> Alpine Robotics</h1>
         <a href="#mission-statement">
             <button class="btn btn-success banner__btn">
                 Tell me more
             </button>
         </a>
-    </div>
+    </section>
 
     <!-- Mission Statement -->
-    <div class="mission-statement container-fluid" id="mission-statement">
-        <div class="title" style="color: #396531;">
+    <section class="mission-statement" id="mission-statement">
+        <div class="title">
             Mission Statement
         </div>
-        <div style="align-self: stretch; text-align: center">
-            <span class="mission-statement__text">
+        <div class="text-center">
+            <p class="mission-statement__text">
                 We, at Alpine Robotics, wish to reach a total of 500 students in the next 3 years, we call this goal
                 engineering with a passion. Even if we inspire just one child to pursue a STEM career, our journey in
-                FTC will have been worthwhile. It's not just about us—it's about <b><i>shaping the future we envision.</i></b>
-            </span>
+                FTC will have been worthwhile. It's not just about us&mdash;it's about <b><i>shaping the future we envision.</i></b>
+            </p>
         </div>
-    </div>
+    </section>
 
     <!-- Our Website -->
-    <div class="our-website text-center container-fluid" style="font-family: 'Montserrat';">
-        <h2 class="title" style="color: white;">Our Website</h2>
+    <section class="our-website text-center">
+        <h2 class="title">Our Website</h2>
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center g-4">
                 <!-- Meet The Team Card 
                 <div class="col-md-4 mb-3">
                     <div class="card card-bg text-white">
@@ -96,10 +96,10 @@
                 -->
 
                 <!-- Team Resources Card -->
-                <div class="col-md-4 mb-3">
+                <div class="col-12 col-md-6 col-xl-4">
                     <div class="card card-bg text-white">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-size: 36px; font-weight: bold;">Team Resources</h5>
+                            <h3 class="card-title fw-bold">Team Resources</h3>
                             <p class="card-text"><i>Resources Hub for Team Members!</i></p>
                             <a href="resources.html" class="btn btn-light"
                                 style="color: #286629; font-weight: bold;">Go to Team Resources</a>
@@ -108,10 +108,10 @@
                 </div>
 
                 <!-- Gallery Card -->
-                <div class="col-md-4 mb-3">
+                <div class="col-12 col-md-6 col-xl-4">
                     <div class="card card-bg text-white">
                         <div class="card-body">
-                            <h5 class="card-title" style="font-size: 36px; font-weight: bold;">Gallery</h5>
+                            <h3 class="card-title fw-bold">Gallery</h3>
                             <p class="card-text"><i>See our team in action!</i></p>
                             <a href="gallery.html" class="btn btn-light" style="color: #286629; font-weight: bold;">Go
                                 to
@@ -121,7 +121,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 sticky-bottom border-top border-2 border-light" style="z-index: 1;">
@@ -137,3 +137,5 @@
 </body>
 
 </html>
+
+
