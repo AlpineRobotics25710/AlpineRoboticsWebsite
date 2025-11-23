@@ -1,0 +1,39 @@
+:root {
+  /* Color tokens */
+  --color-bg-dark: #1a1a1a;
+  --color-bg-light: #f3faf4;
+  --color-forest: #14532d;
+  --color-accent: #22c55e;
+  --color-blue: #00b4ff;
+  --color-surface: #111315;
+  --color-muted: #c7d1d3;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+  /* Typography */
+  --font-heading: "Montserrat", "Sora", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+
+  /* Sizing & spacing */
+  --max-width: 1200px;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  /* Motion */
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 700ms;
+  --easing-smooth: cubic-bezier(0.4, 0.22, 0.08, 1);
+  --easing-bounce: cubic-bezier(0.3, 1.4, 0.4, 1);
+}
