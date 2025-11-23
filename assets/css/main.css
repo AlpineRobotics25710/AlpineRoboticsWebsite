@@ -72,9 +72,9 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: linear-gradient(180deg, rgba(223, 244, 255, 0.9), rgba(223, 244, 255, 0.75));
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(20, 83, 45, 0.12);
+  background: rgba(233, 244, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(20, 83, 45, 0.1);
 }
 
 .nav {
@@ -89,7 +89,7 @@ header.site-header {
 .nav__brand {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
   font-weight: 800;
   letter-spacing: 0.5px;
   color: #0f2014;
