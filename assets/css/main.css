@@ -116,6 +116,39 @@ header.site-header {
   white-space: nowrap;
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 32, 20, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f2014;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: background var(--duration-fast) var(--easing-smooth), transform var(--duration-fast) var(--easing-smooth);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.theme-toggle__sun,
+.theme-toggle__moon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: rgba(17, 24, 31, 0.85);
+  color: #e6f2e7;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
 .nav__link {
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-sm);
@@ -170,7 +203,7 @@ header.site-header {
   right: 0;
   bottom: -1px;
   height: 80px;
-  background: linear-gradient(180deg, rgba(233, 244, 255, 0) 0%, rgba(15, 21, 23, 0.65) 70%, #0f1517 100%);
+  background: linear-gradient(180deg, rgba(233, 244, 255, 0) 0%, rgba(233, 244, 255, 0.9) 80%, var(--color-bg-light) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -445,7 +478,7 @@ header.site-header {
   background: radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.08), transparent 45%),
     radial-gradient(circle at 80% 20%, rgba(0, 180, 255, 0.06), transparent 45%);
   pointer-events: none;
-  opacity: 0.7;
+  opacity: 0.35;
 }
 
 .hero + .section {
@@ -483,12 +516,12 @@ header.site-header {
 
 .card {
   position: relative;
-  background: linear-gradient(145deg, rgba(34, 197, 94, 0.12), rgba(11, 17, 19, 0.92));
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  border-left: 3px solid rgba(34, 197, 94, 0.5);
+  background: #ffffff;
+  border: 1px solid rgba(15, 32, 20, 0.08);
+  border-left: 3px solid rgba(34, 197, 94, 0.35);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   transition: transform var(--duration-base) var(--easing-smooth),
     border-color var(--duration-base) var(--easing-smooth),
