@@ -1,5 +1,6 @@
 // Basic motion hooks; respects prefers-reduced-motion.
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const storageKey = "alpine-theme";
 
 function initHeroAnimations() {
   if (prefersReducedMotion || typeof gsap === "undefined") return;
@@ -92,4 +93,25 @@ document.addEventListener("DOMContentLoaded", () => {
   initParallax();
   initScrollReveals();
   initMountainParallax();
+  initThemeToggle();
 });
+
+function applyTheme(theme) {
+  const root = document.documentElement;
+  root.setAttribute("data-theme", theme);
+}
+
+function initThemeToggle() {
+  const toggle = document.querySelector(".theme-toggle");
+  if (!toggle) return;
+  const stored = localStorage.getItem(storageKey);
+  const initial = stored === "dark" ? "dark" : "light";
+  applyTheme(initial);
+
+  toggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "light";
+    const next = current === "light" ? "dark" : "light";
+    applyTheme(next);
+    localStorage.setItem(storageKey, next);
+  });
+}
