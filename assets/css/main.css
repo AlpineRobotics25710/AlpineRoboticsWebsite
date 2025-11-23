@@ -185,8 +185,8 @@ header.site-header {
 
 .mountain--ridge {
   height: 42%;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2200' height='320' viewBox='0 0 2200 320'><path d='M0 215 L180 175 L360 205 L520 165 L700 200 L860 160 L1040 205 L1200 180 L1380 210 L1540 170 L1720 205 L1900 175 L2100 205 L2200 190 L2200 320 L0 320 Z' fill='%230f2a1c'/></svg>");
-  opacity: 0.7;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2400' height='360' viewBox='0 0 2400 360'><path d='M0 240 L200 210 L420 230 L580 200 L760 220 L960 180 L1140 230 L1320 200 L1550 250 L1780 200 L1980 230 L2200 210 L2400 230 L2400 360 L0 360 Z' fill='%232e6b42'/><path d='M300 240 Q520 150 760 230 Q980 140 1210 245 Q1460 130 1700 240 Q1900 180 2140 230 L2400 260 L2400 360 L0 360 L0 290 Z' fill='%2356916a'/><path d='M420 250 Q720 120 1040 250 Q1320 110 1640 250 Q1880 160 2180 250 L2400 310 L2400 360 L0 360 L0 300 Z' fill='%2381b48d' opacity='0.65'/></svg>");
+  opacity: 0.78;
 }
 
 .mountain--back {
