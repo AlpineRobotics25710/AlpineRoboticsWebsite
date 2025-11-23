@@ -58,6 +58,7 @@ function initScrollReveals() {
 
 function initMountainParallax() {
   if (prefersReducedMotion) return;
+  if (window.innerWidth < 560) return;
   const hero = document.querySelector(".hero");
   const layers = document.querySelectorAll("[data-parallax-layer]");
   if (!hero || !layers.length) return;
