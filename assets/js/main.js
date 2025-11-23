@@ -68,7 +68,7 @@ function initMountainParallax() {
     const rect = hero.getBoundingClientRect();
     const viewHeight = window.innerHeight;
     const progress = Math.min(1, Math.max(0, (viewHeight - rect.top) / (viewHeight + rect.height)));
-    const baseOffset = progress * 120; // layered depth
+    const baseOffset = progress * 160; // layered depth
     layers.forEach((layer) => {
       const speed = parseFloat(layer.dataset.speed || "0.2");
       layer.style.transform = `translateY(${baseOffset * speed}px)`;
