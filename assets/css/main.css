@@ -151,7 +151,7 @@ header.site-header {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, #dff4ff 0%, #eaf9ff 45%, #d8f1ff 100%);
+  background: linear-gradient(180deg, #e9f4ff 0%, #edf7ff 40%, #e4f2ff 100%);
 }
 
 .hero::after {
@@ -177,7 +177,7 @@ header.site-header {
   left: -5%;
   width: 110%;
   background-repeat: repeat-x;
-  background-size: 1800px auto;
+  background-size: 2000px auto;
   bottom: 0;
   transform: translateY(0);
   transition: transform var(--duration-slow) var(--easing-smooth);
@@ -185,26 +185,26 @@ header.site-header {
 
 .mountain--ridge {
   height: 42%;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1800' height='320' viewBox='0 0 1800 320'><path d='M0 210 L150 170 L300 205 L450 150 L600 190 L760 140 L930 195 L1100 160 L1280 205 L1450 170 L1600 200 L1800 180 L1800 320 L0 320 Z' fill='%230f3324'/></svg>");
-  opacity: 0.75;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2200' height='320' viewBox='0 0 2200 320'><path d='M0 215 L180 175 L360 205 L520 165 L700 200 L860 160 L1040 205 L1200 180 L1380 210 L1540 170 L1720 205 L1900 175 L2100 205 L2200 190 L2200 320 L0 320 Z' fill='%23436595'/></svg>");
+  opacity: 0.7;
 }
 
 .mountain--back {
   height: 46%;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1800' height='340' viewBox='0 0 1800 340'><path d='M0 240 L160 180 L300 215 L440 160 L620 210 L760 165 L940 220 L1100 175 L1280 215 L1420 185 L1600 215 L1800 195 L1800 340 L0 340 Z' fill='%2314532d'/></svg>");
-  opacity: 0.85;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2200' height='340' viewBox='0 0 2200 340'><path d='M0 245 L200 190 L360 220 L540 180 L720 215 L900 190 L1080 225 L1260 195 L1450 225 L1620 195 L1840 220 L2050 200 L2200 215 L2200 340 L0 340 Z' fill='%234b75a7'/></svg>");
+  opacity: 0.8;
 }
 
 .mountain--mid {
   height: 58%;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1800' height='420' viewBox='0 0 1800 420'><path d='M0 280 L150 230 L280 265 L420 215 L560 255 L720 210 L860 270 L1020 220 L1200 265 L1380 230 L1550 260 L1800 240 L1800 420 L0 420 Z' fill='%231a6a3c'/><g fill='%2322c55e'><polygon points='110,280 145,214 186,286'/><polygon points='260,272 295,218 332,278'/><polygon points='430,266 470,208 510,270'/><polygon points='610,276 648,214 690,274'/><polygon points='790,270 828,212 866,274'/><polygon points='980,278 1018,214 1056,280'/><polygon points='1170,270 1208,212 1246,276'/><polygon points='1360,276 1398,214 1436,278'/><polygon points='1560,270 1598,214 1636,276'/><polygon points='1740,276 1778,218 1816,278'/></g><g fill='%235b3a1d'><rect x='140' y='280' width='10' height='48' rx='2'/><rect x='310' y='272' width='10' height='52' rx='2'/><rect x='486' y='268' width='10' height='56' rx='2'/><rect x='670' y='276' width='10' height='48' rx='2'/><rect x='850' y='270' width='10' height='54' rx='2'/><rect x='1036' y='278' width='10' height='46' rx='2'/><rect x='1224' y='272' width='10' height='52' rx='2'/><rect x='1414' y='278' width='10' height='46' rx='2'/><rect x='1610' y='272' width='10' height='52' rx='2'/></g></svg>");
-  opacity: 0.9;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2200' height='420' viewBox='0 0 2200 420'><path d='M0 285 L180 240 L360 270 L520 230 L700 265 L860 230 L1040 275 L1220 235 L1400 275 L1580 240 L1780 270 L1980 240 L2200 265 L2200 420 L0 420 Z' fill='%2340648f'/><g fill='%2339577c'><polygon points='120,290 152,236 188,292'/><polygon points='300,280 334,232 374,286'/><polygon points='500,286 534,234 574,288'/><polygon points='700,282 734,230 776,286'/><polygon points='900,286 936,232 978,288'/><polygon points='1100,282 1136,230 1180,286'/><polygon points='1300,286 1340,232 1382,290'/><polygon points='1500,282 1540,232 1582,286'/><polygon points='1700,286 1740,232 1784,290'/><polygon points='1900,282 1940,230 1982,286'/></g><g fill='%23364f73'><polygon points='70,298 92,240 126,300'/><polygon points='250,294 278,238 314,296'/><polygon points='440,300 468,240 504,302'/><polygon points='630,296 660,238 696,298'/><polygon points='820,300 848,240 886,302'/><polygon points='1010,296 1040,238 1076,300'/><polygon points='1200,300 1230,240 1266,302'/><polygon points='1400,296 1428,238 1466,298'/><polygon points='1600,300 1628,240 1666,302'/><polygon points='1800,296 1828,238 1866,298'/></g><g fill='%234f3320' opacity='0.55'><rect x='140' y='292' width='10' height='42' rx='2'/><rect x='330' y='288' width='10' height='44' rx='2'/><rect x='520' y='294' width='10' height='40' rx='2'/><rect x='720' y='292' width='10' height='42' rx='2'/><rect x='910' y='294' width='10' height='40' rx='2'/><rect x='1110' y='292' width='10' height='42' rx='2'/><rect x='1310' y='294' width='10' height='40' rx='2'/><rect x='1510' y='292' width='10' height='42' rx='2'/><rect x='1710' y='294' width='10' height='40' rx='2'/><rect x='1910' y='292' width='10' height='42' rx='2'/></g></svg>");
+  opacity: 0.92;
 }
 
 .mountain--front {
   height: 65%;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1900' height='520' viewBox='0 0 1900 520'><path d='M0 360 L140 300 L300 350 L420 290 L580 340 L720 290 L880 350 L1040 300 L1220 350 L1380 300 L1540 350 L1700 305 L1900 330 L1900 520 L0 520 Z' fill='%2322c55e'/><g fill='%232edb74'><polygon points='80,358 110,268 150,360'/><polygon points='210,352 250,262 290,354'/><polygon points='360,348 398,258 440,350'/><polygon points='520,356 560,266 600,358'/><polygon points='700,352 738,262 780,356'/><polygon points='880,348 918,260 960,352'/><polygon points='1060,356 1098,266 1140,360'/><polygon points='1240,350 1280,262 1320,354'/><polygon points='1420,356 1460,266 1500,360'/><polygon points='1600,350 1640,264 1680,356'/><polygon points='1760,348 1800,262 1840,352'/></g><g fill='%231a6a3c'><polygon points='30,364 70,280 110,362'/><polygon points='180,360 220,278 262,360'/><polygon points='330,366 370,280 410,362'/><polygon points='500,358 540,276 582,356'/><polygon points='660,366 702,278 742,364'/><polygon points='840,360 878,276 920,358'/><polygon points='1010,364 1050,276 1092,362'/><polygon points='1180,358 1222,276 1262,356'/><polygon points='1360,366 1400,278 1442,364'/><polygon points='1540,360 1582,276 1622,358'/><polygon points='1710,364 1750,278 1792,362'/></g><g fill='%235b3a1d'><rect x='122' y='360' width='10' height='54' rx='2'/><rect x='270' y='352' width='12' height='62' rx='2'/><rect x='450' y='356' width='10' height='60' rx='2'/><rect x='612' y='360' width='12' height='58' rx='2'/><rect x='792' y='352' width='10' height='62' rx='2'/><rect x='972' y='356' width='12' height='60' rx='2'/><rect x='1152' y='352' width='10' height='62' rx='2'/><rect x='1332' y='356' width='12' height='60' rx='2'/><rect x='1512' y='354' width='10' height='60' rx='2'/><rect x='1688' y='352' width='12' height='62' rx='2'/></g><g fill='%235b3a1d' opacity='0.6'><rect x='70' y='366' width='8' height='38' rx='2'/><rect x='340' y='362' width='8' height='42' rx='2'/><rect x='520' y='368' width='8' height='36' rx='2'/><rect x='910' y='364' width='8' height='40' rx='2'/><rect x='1280' y='366' width='8' height='38' rx='2'/><rect x='1480' y='364' width='8' height='40' rx='2'/></g></svg>");
-  opacity: 0.95;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2200' height='540' viewBox='0 0 2200 540'><path d='M0 380 L180 320 L360 370 L520 310 L700 360 L880 315 L1060 370 L1240 320 L1420 368 L1600 318 L1800 365 L2000 325 L2200 350 L2200 540 L0 540 Z' fill='%232f4f85'/><g fill='%233b5d99'><polygon points='90,380 128,292 168,384'/><polygon points='260,372 298,290 340,378'/><polygon points='440,380 478,294 522,384'/><polygon points='620,374 662,292 704,380'/><polygon points='820,380 858,292 902,384'/><polygon points='1000,376 1042,292 1086,382'/><polygon points='1200,382 1240,292 1284,386'/><polygon points='1400,376 1442,292 1486,382'/><polygon points='1600,382 1640,292 1684,386'/><polygon points='1800,376 1842,292 1886,382'/><polygon points='2000,380 2040,292 2084,386'/></g><g fill='%23284472'><polygon points='30,386 70,300 110,388'/><polygon points='200,392 242,300 282,392'/><polygon points='360,388 402,300 446,388'/><polygon points='540,394 582,300 626,394'/><polygon points='720,388 762,300 806,388'/><polygon points='900,392 942,300 986,394'/><polygon points='1080,388 1122,300 1166,388'/><polygon points='1260,392 1302,300 1346,394'/><polygon points='1440,388 1482,300 1526,388'/><polygon points='1620,392 1662,300 1706,394'/><polygon points='1800,388 1842,300 1886,388'/><polygon points='1980,392 2022,300 2066,394'/></g><g fill='%23301f15' opacity='0.65'><rect x='126' y='382' width='10' height='44' rx='2'/><rect x='306' y='380' width='12' height='48' rx='2'/><rect x='486' y='382' width='10' height='46' rx='2'/><rect x='686' y='384' width='12' height='44' rx='2'/><rect x='866' y='382' width='10' height='46' rx='2'/><rect x='1056' y='384' width='12' height='44' rx='2'/><rect x='1246' y='382' width='10' height='46' rx='2'/><rect x='1426' y='384' width='12' height='44' rx='2'/><rect x='1606' y='382' width='10' height='46' rx='2'/><rect x='1786' y='384' width='12' height='44' rx='2'/><rect x='1966' y='382' width='10' height='46' rx='2'/></g><g fill='%23301f15' opacity='0.4'><rect x='70' y='392' width='8' height='30' rx='2'/><rect x='350' y='390' width='8' height='32' rx='2'/><rect x='540' y='394' width='8' height='28' rx='2'/><rect x='920' y='392' width='8' height='30' rx='2'/><rect x='1320' y='394' width='8' height='28' rx='2'/><rect x='1680' y='392' width='8' height='30' rx='2'/></g></svg>");
+  opacity: 0.98;
 }
 
 .hero__grid {
