@@ -181,22 +181,100 @@
   gap: var(--space-4);
 }
 
+.gallery-filters {
+  display: inline-flex;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.filter-btn {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: transparent;
+  color: #e6f2e7;
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--easing-smooth),
+    transform var(--duration-fast) var(--easing-smooth);
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.filter-btn.is-active {
+  border-color: rgba(34, 197, 94, 0.5);
+  background: rgba(34, 197, 94, 0.12);
+  color: #fff;
+}
+
 .gallery-card {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-border);
   background: rgba(255, 255, 255, 0.03);
   box-shadow: var(--color-shadow, 0 16px 40px rgba(0, 0, 0, 0.4));
+  transition: transform var(--duration-base) var(--easing-smooth), box-shadow var(--duration-base) var(--easing-smooth);
 }
 
 .gallery-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  cursor: zoom-in;
 }
 
 .gallery-card__body {
   padding: var(--space-4);
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-base) var(--easing-smooth);
+  z-index: 50;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: min(90vw, 1000px);
+  max-height: 80vh;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--color-shadow, 0 20px 60px rgba(0, 0, 0, 0.55));
+}
+
+.lightbox.animate-in img {
+  animation: pop var(--duration-base) var(--easing-bounce);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.94);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .sponsor-grid {

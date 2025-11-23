@@ -22,6 +22,18 @@ function initHeroAnimations() {
   });
 }
 
+function initParallax() {
+  if (prefersReducedMotion) return;
+  const target = document.querySelector(".hero__card");
+  if (!target) return;
+  document.addEventListener("pointermove", (e) => {
+    const { innerWidth, innerHeight } = window;
+    const x = (e.clientX - innerWidth / 2) / innerWidth;
+    const y = (e.clientY - innerHeight / 2) / innerHeight;
+    target.style.transform = `rotateX(${y * -6}deg) rotateY(${x * 6}deg) translateY(0)`;
+  });
+}
+
 function initScrollReveals() {
   if (prefersReducedMotion || typeof gsap === "undefined" || !gsap.registerPlugin) return;
   if (typeof ScrollTrigger === "undefined") return;
@@ -46,5 +58,6 @@ function initScrollReveals() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeroAnimations();
+  initParallax();
   initScrollReveals();
 });
