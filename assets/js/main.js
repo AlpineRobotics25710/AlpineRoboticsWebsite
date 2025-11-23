@@ -56,8 +56,39 @@ function initScrollReveals() {
   });
 }
 
+function initMountainParallax() {
+  if (prefersReducedMotion) return;
+  const hero = document.querySelector(".hero");
+  const layers = document.querySelectorAll("[data-parallax-layer]");
+  if (!hero || !layers.length) return;
+
+  let ticking = false;
+  const update = () => {
+    const rect = hero.getBoundingClientRect();
+    const viewHeight = window.innerHeight;
+    const progress = Math.min(1, Math.max(0, (viewHeight - rect.top) / (viewHeight + rect.height)));
+    const baseOffset = progress * 80; // subtle movement
+    layers.forEach((layer) => {
+      const speed = parseFloat(layer.dataset.speed || "0.2");
+      layer.style.transform = `translateY(${baseOffset * speed}px)`;
+    });
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+
+  update();
+  window.addEventListener("scroll", onScroll);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initHeroAnimations();
   initParallax();
   initScrollReveals();
+  initMountainParallax();
 });
