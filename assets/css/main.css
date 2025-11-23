@@ -41,7 +41,7 @@
 body {
   margin: 0;
   font-family: var(--font-body);
-  background: linear-gradient(180deg, #dff4ff 0%, #1a1a1a 160vh);
+  background: #0f1517;
   color: #e6f2e7;
   -webkit-font-smoothing: antialiased;
 }
@@ -160,8 +160,8 @@ header.site-header {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 140px;
-  background: linear-gradient(180deg, rgba(223, 244, 255, 0) 0%, #0f1517 100%);
+  height: 120px;
+  background: linear-gradient(180deg, rgba(233, 244, 255, 0) 0%, rgba(15, 21, 23, 0.9) 85%, #0f1517 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -315,8 +315,9 @@ header.site-header {
   padding: var(--space-4);
   border: 1px solid rgba(15, 32, 20, 0.08);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.94);
   color: #0f2014;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .metric__value {
@@ -379,6 +380,18 @@ header.site-header {
 
 .section {
   padding: var(--space-12) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(0, 180, 255, 0.06), transparent 45%);
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 .section__header {
@@ -410,12 +423,12 @@ header.site-header {
 
 .card {
   position: relative;
-  background: linear-gradient(160deg, rgba(34, 197, 94, 0.14), rgba(17, 19, 21, 0.9));
-  border: 1px solid rgba(34, 197, 94, 0.35);
-  border-left: 3px solid rgba(34, 197, 94, 0.6);
+  background: linear-gradient(145deg, rgba(34, 197, 94, 0.12), rgba(11, 17, 19, 0.92));
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-left: 3px solid rgba(34, 197, 94, 0.5);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  box-shadow: var(--color-shadow);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   transition: transform var(--duration-base) var(--easing-smooth),
     border-color var(--duration-base) var(--easing-smooth),
