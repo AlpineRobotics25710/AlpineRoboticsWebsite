@@ -1,4 +1,4 @@
-const imageRoot = "../images/galleryImages";
+﻿const imageRoot = "../images/galleryImages";
 
 const galleries = [
   {
@@ -45,7 +45,7 @@ function renderSections() {
       const images = g.files
         .map(
           (file, i) => `
-            <figure class="masonry__item">
+            <figure class="image-grid__item">
               <img src="${imageRoot}/${g.folder}/${file}" loading="lazy" decoding="async" alt="${g.title} photo ${i + 1}" data-section="${id}">
             </figure>`
         )
@@ -56,8 +56,10 @@ function renderSections() {
             <h2 class="gallery-section__title">${g.title}</h2>
             <p class="gallery-section__description">${g.description}</p>
           </div>
-          <div class="masonry">
-            ${images}
+          <div class="gallery-card">
+            <div class="image-grid">
+              ${images}
+            </div>
           </div>
         </section>
       `;
@@ -91,7 +93,7 @@ function initLightbox() {
   document.addEventListener("click", (e) => {
     const target = e.target;
     if (!(target instanceof HTMLElement)) return;
-    if (target.tagName === "IMG" && target.closest(".masonry__item")) {
+    if (target.tagName === "IMG" && target.closest(".image-grid__item")) {
       const src = target.getAttribute("src");
       const alt = target.getAttribute("alt") || "Gallery image";
       if (src) {
@@ -132,12 +134,32 @@ function initActiveLinkHighlight() {
   document.querySelectorAll(".gallery-section").forEach((section) => observer.observe(section));
 }
 
+function initSidebarLinks() {
+  const links = document.querySelectorAll(".sidebar__link");
+  if (!links.length) return;
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href")?.replace("#", "");
+      const targetEl = targetId ? document.getElementById(targetId) : null;
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+}
+
 function initGalleryPage() {
   renderSidebar();
   renderSections();
   initSidebarToggle();
+  initSidebarLinks();
   initLightbox();
   initActiveLinkHighlight();
 }
 
 document.addEventListener("DOMContentLoaded", initGalleryPage);
+
+
+
+

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,8 +6,7 @@
   <title>Gallery - Alpine Robotics 25710</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
   <link rel="stylesheet" href="../assets/css/gallery.css">
@@ -47,13 +46,13 @@
       <header class="page-heading">
         <div class="container">
           <span class="pill">Gallery</span>
-          <h1 class="page-heading__title">On the field, in the shop, and with our community.</h1>
-          <p class="page-heading__lead">Browse every outreach and event. Use the sidebar to jump between galleries; tap any photo to view full screen.</p>
+          <h1 class="page-heading__title">Outreach moments, competitions, and build days.</h1>
+          <p class="page-heading__lead">Use the left sidebar to jump between outreach events. Tap any photo to view it full screen.</p>
         </div>
       </header>
 
-      <section class="section">
-        <div class="gallery-layout container">
+      <section class="section gallery-wrapper">
+        <div class="gallery-layout">
           <aside class="gallery-sidebar" aria-label="Gallery navigation">
             <div class="sidebar__header">
               <h2>Outreach</h2>
@@ -65,19 +64,11 @@
             <nav id="sidebar-nav" class="sidebar__nav"></nav>
           </aside>
 
-          <div class="gallery-content">
-            <div id="gallery-sections"></div>
+          <div class="gallery-content" id="gallery-sections">
+            <!-- Sections rendered by JS -->
           </div>
         </div>
       </section>
-
-      <div class="lightbox" aria-hidden="true" role="dialog">
-        <div class="lightbox__backdrop"></div>
-        <div class="lightbox__content">
-          <button class="lightbox__close" aria-label="Close image">&times;</button>
-          <img src="" alt="">
-        </div>
-      </div>
     </main>
 
     <footer class="site-footer">
@@ -88,12 +79,17 @@
     </footer>
   </div>
 
+  <div class="lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox__backdrop"></div>
+    <div class="lightbox__content">
+      <button class="lightbox__close" aria-label="Close image">&times;</button>
+      <img src="" alt="">
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="../assets/js/main.js" type="module"></script>
   <script src="../assets/js/gallery.js" type="module"></script>
 </body>
 </html>
-
-
-
