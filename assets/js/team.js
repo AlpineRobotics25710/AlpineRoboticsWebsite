@@ -1,51 +1,55 @@
-import { teamData } from "../data/teamData.js";
+import { team } from "../data/teamData.js";
 
-const sectionsOrder = ["Captains", "Subsystem Leads", "Members", "Mentors"];
+const groups = [
+  { key: "captains", title: "Captains", targetId: "team-captains" },
+  { key: "leads", title: "Subsystem Leads", targetId: "team-leads" },
+  { key: "members", title: "Members", targetId: "team-members" },
+  { key: "mentors", title: "Mentors", targetId: "team-mentors" }
+];
+
+const allMembers = [];
+groups.forEach(({ key }) => {
+  (team[key] || []).forEach((m) => allMembers.push(m));
+});
 
 function createCard(member, index) {
+  const img = member.image || "../images/team/default.jpg";
+  const btn = member.bio || member.funfact || member.links ? `<button class="team-card__btn" data-profile="${index}">View Profile</button>` : "";
   return `
-    <article class="team-card-modern" data-index="${index}">
-      <img class="team-card__avatar" src="${member.image}" alt="${member.name} headshot" loading="lazy" decoding="async">
+    <article class="card team-card-modern" data-index="${index}">
+      <img class="team-card__avatar" src="${img}" alt="${member.name} headshot" loading="lazy" decoding="async">
       <p class="team-card__role">${member.role}</p>
       <h3 class="team-card__name">${member.name}</h3>
-      <p class="team-card__summary">${member.summary}</p>
+      <p class="team-card__summary">${member.summary || ""}</p>
       <div class="team-card__actions">
-        <button class="team-card__btn" data-profile="${index}">View Profile</button>
+        ${btn}
       </div>
     </article>
   `;
 }
 
-function renderSections() {
-  const container = document.getElementById("team-sections");
+function renderGroup({ key, title, targetId }) {
+  const container = document.getElementById(targetId);
   if (!container) return;
-
-  const grouped = sectionsOrder.reduce((acc, key) => {
-    acc[key] = [];
-    return acc;
-  }, {});
-
-  teamData.forEach((member, idx) => {
-    const group = sectionsOrder.includes(member.group) ? member.group : "Members";
-    grouped[group].push({ ...member, idx });
-  });
-
-  container.innerHTML = sectionsOrder
-    .map((group) => {
-      const members = grouped[group] || [];
-      if (!members.length) return "";
-      return `
-        <section class="team-section">
-          <div class="section__header">
-            <h2 class="section__title">${group}</h2>
-          </div>
-          <div class="team-grid-modern">
-            ${members.map((m) => createCard(m, m.idx)).join("")}
-          </div>
-        </section>
-      `;
+  const members = team[key] || [];
+  if (!members.length) {
+    container.innerHTML = "";
+    return;
+  }
+  const cards = members
+    .map((m) => {
+      const idx = allMembers.indexOf(m);
+      return createCard(m, idx);
     })
     .join("");
+  container.innerHTML = `
+    <div class="section__header">
+      <h2 class="section__title">${title}</h2>
+    </div>
+    <div class="team-grid">
+      ${cards}
+    </div>
+  `;
 }
 
 function buildModal() {
@@ -81,10 +85,10 @@ function updateModal(modal, member) {
   const meta = modal.querySelector(".modal__meta");
   const funfact = modal.querySelector(".modal__funfact");
 
-  avatar.src = member.image;
+  avatar.src = member.image || "../images/team/default.jpg";
   avatar.alt = `${member.name} headshot`;
-  role.textContent = member.role;
-  name.textContent = member.name;
+  role.textContent = member.role || "";
+  name.textContent = member.name || "";
   bio.textContent = member.bio || member.summary || "";
   funfact.textContent = member.funfact ? `Fun fact: ${member.funfact}` : "";
 
@@ -148,13 +152,13 @@ function bindCards(modalApi) {
     const btn = e.target instanceof HTMLElement ? e.target.closest("[data-profile]") : null;
     if (!btn) return;
     const idx = parseInt(btn.getAttribute("data-profile") || "0", 10);
-    const member = teamData[idx];
+    const member = allMembers[idx];
     if (member) modalApi.open(member);
   });
 }
 
 function initTeam() {
-  renderSections();
+  groups.forEach(renderGroup);
   const modalApi = initModal();
   bindCards(modalApi);
 }

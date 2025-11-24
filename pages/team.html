@@ -6,10 +6,10 @@
   <title>Meet the Team - Alpine Robotics 25710</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/team.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0RD2S0XPZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,7 +17,7 @@
     gtag('js', new Date());
     gtag('config', 'G-J0RD2S0XPZ');
   </script>
-  <link rel="stylesheet" href="../assets/css/team.css">\n\1
+</head>
 <body data-theme="light">
   <div class="page">
     <header class="site-header">
@@ -43,41 +43,41 @@
     </header>
 
     <main>
-      <header class="page-heading">
+      <header class="page-heading team-hero">
         <div class="container">
-          <span class="pill">Team 25710</span>
-          <h1 class="page-heading__title">People behind the robots.</h1>
-          <p class="page-heading__lead">Builders, programmers, drivers, scouts, outreach leads, and mentors working together.</p>
+          <div class="team-hero-grid">
+            <div class="team-hero-left">
+              <span class="pill">Team #25710</span>
+              <h1 class="page-heading__title">Alpine Robotics</h1>
+              <p class="page-heading__lead">Meet the people behind Alpine Robotics. A group of builders, programmers, drivers, designers, and mentors who bring ideas to life. One prototype, test session, and competition at a time.</p>
+            </div>
+            <div class="team-hero-right">
+              <div class="how-we-work-card">
+                <h2>How We Work</h2>
+                <p class="section__description">We run the team like a mini engineering studio — fast feedback, clear ownership, and constant iteration.</p>
+                <p class="section__description">Our workflow:</p>
+                <ul>
+                  <li>Weekly standups to sync progress</li>
+                  <li>Driver + auton testing blocks every cycle</li>
+                  <li>Subsystem leads who own documentation &amp; design decisions</li>
+                  <li>Outreach/media team managing events &amp; sponsors</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
-      <section class="section">\n        <div class="container stack">\n          <div class="section__header">\n            <h2 class="section__title">Meet the Team</h2>\n            <p class="section__description">Captains, subsystem leads, members, and mentors. Click any profile for details.</p>\n          </div>\n          <div id="team-sections" class="team-sections"></div>
-            <div class="team-card">
-              <span class="team-card__role">Programming Co-Captain</span>
-              <strong>Adi</strong>
-              <p class="muted">Auton routines, PedroPathing tuning, sensor integration.</p>
-            </div>
-            <div class="team-card">
-              <span class="team-card__role">Programming Co-Captain</span>
-              <strong>Prathyush</strong>
-              <p class="muted">TeleOp, Mechanism Control, Auton </p>
-            </div>
-            <div class="team-card">
-              <span class="team-card__role">Outreach & Media</span>
-              <strong>Taylor</strong>
-              <p class="muted">Events, social updates, sponsor spotlights.</p>
-            </div>
-            <div class="team-card">
-              <span class="team-card__role">Scouting</span>
-              <strong>Riley</strong>
-              <p class="muted">Match data, alliance insights, pit checklists.</p>
-            </div>
-            <div class="team-card">
-              <span class="team-card__role">Mentor</span>
-              <strong>Coach Kim</strong>
-              <p class="muted">Mechanical guidance, safety, and season planning.</p>
-            </div>
+      <section class="section">
+        <div class="container stack">
+          <div class="section__header">
+            <h2 class="section__title">Meet the Team</h2>
+            <p class="section__description">Captains, subsystem leads, members, and mentors. Click any profile for details.</p>
           </div>
+          <div id="team-captains"></div>
+          <div id="team-leads"></div>
+          <div id="team-members"></div>
+          <div id="team-mentors"></div>
         </div>
       </section>
     </main>
@@ -93,9 +93,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="../assets/js/main.js" type="module"></script>
-  <script src="../assets/js/team.js" type="module"></script>\n</body>
+  <script src="../assets/js/team.js" type="module"></script>
+</body>
 </html>
-
-
-
-
