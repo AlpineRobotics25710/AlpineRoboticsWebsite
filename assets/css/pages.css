@@ -34,12 +34,31 @@
   position: relative;
   padding: var(--space-14, 3.5rem) 0 var(--space-10);
   overflow: hidden;
+  background: var(--section-bg);
 }
 
 .sub-hero__bg {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, var(--hero-sky-start, #e9f4ff) 0%, var(--hero-sky-mid, #edf7ff) 45%, var(--hero-sky-end, #e4f2ff) 100%);
+}
+
+.sub-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 0;
+  background: transparent;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sub-hero__parallax {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
 }
 
 .sub-hero__content {
@@ -52,6 +71,47 @@
 
 body[data-theme="dark"] .sub-hero__bg {
   background: linear-gradient(180deg, #0b1221 0%, #0d1528 45%, #0a1221 100%);
+}
+
+.sub-hero__sky-objects {
+  position: absolute;
+  top: 0;
+  right: 6%;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+
+.sub-hero__sun,
+.sub-hero__moon {
+  position: absolute;
+  font-size: 60px;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.12));
+  transition: transform 600ms var(--easing-smooth), opacity 400ms var(--easing-smooth);
+}
+
+.sub-hero__sun {
+  top: 10px;
+  right: 0;
+  opacity: 1;
+}
+
+.sub-hero__moon {
+  top: -120px;
+  right: 6px;
+  opacity: 0;
+}
+
+[data-theme="dark"] .sub-hero__sun {
+  transform: translateY(160px);
+  opacity: 0;
+}
+
+[data-theme="dark"] .sub-hero__moon {
+  transform: translateY(150px);
+  opacity: 1;
 }
 
 .pill {
