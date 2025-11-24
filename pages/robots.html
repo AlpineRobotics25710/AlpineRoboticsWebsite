@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Previous Robots – Alpine Robotics 25710</title>
+  <title>Previous Robots - Alpine Robotics 25710</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
@@ -19,7 +18,7 @@
     gtag('config', 'G-J0RD2S0XPZ');
   </script>
 </head>
-<body>
+<body data-theme="light">
   <div class="page">
     <header class="site-header">
       <div class="container nav">
@@ -35,38 +34,35 @@
           <a class="nav__link" href="./gallery.html">Gallery</a>
           <a class="nav__link" href="./sponsors.html">Sponsors</a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle light or dark mode">
+          <span class="theme-toggle__sun" aria-hidden="true">☀️</span>
+          <span class="theme-toggle__moon" aria-hidden="true">🌙</span>
+        </button>
         <a class="nav__cta" href="./season.html#join">Join Us</a>
       </div>
     </header>
 
     <main>
-      <section class="sub-hero">
-        <div class="sub-hero__bg"></div>
-        <div class="sub-hero__parallax">
-          <div class="mountain mountain--ridge" data-parallax-layer data-speed="0.08"></div>
-          <div class="mountain mountain--back" data-parallax-layer data-speed="0.16"></div>
-          <div class="mountain mountain--mid" data-parallax-layer data-speed="0.28"></div>
-          <div class="mountain mountain--front" data-parallax-layer data-speed="0.5"></div>
+      <header class="page-heading">
+        <div class="container">
+          <span class="pill">Robot archive</span>
+          <h1 class="page-heading__title">Built, tested, iterated.</h1>
+          <p class="page-heading__lead">Specs, subsystem notes, and engineering portfolio PDFs for our recent robots.</p>
+          <a class="badge-link" href="../resources/engineering-portfolio.pdf" data-gtag="portfolio-download">Download engineering portfolio (PDF)</a>
         </div>
-        <div class="sub-hero__sky-objects">
-          <div class="sub-hero__sun">☀️</div>
-          <div class="sub-hero__moon">🌙</div>
-        </div>
-        <div class="container sub-hero__content">
-          <div>
-            <span class="pill">Robot archive</span>
-            <h1 class="hero__title">Built, tested, iterated.</h1>
-            <p class="lead">Specs, subsystem notes, and engineering portfolio PDFs for our recent robots.</p>
-            <a class="badge-link" href="../resources/engineering-portfolio.pdf" data-gtag="portfolio-download">Download engineering portfolio (PDF)</a>
+      </header>
+
+      <section class="section">
+        <div class="container stack">
+          <div class="section__header">
+            <h2 class="section__title">Build principles</h2>
+            <p class="section__description">How we approach every drivebase and subsystem.</p>
           </div>
-          <div class="section--surface stack">
-            <strong>Build principles</strong>
-            <div class="spec-list">
-              <span>• Reliability over novelty — robust drivebases first</span>
-              <span>• Modular subsystems to swap mid-season</span>
-              <span>• CAD-first; document every iteration</span>
-              <span>• Post-match reviews with data logs</span>
-            </div>
+          <div class="spec-list">
+            <span>&bull; Reliability over novelty - robust drivebases first</span>
+            <span>&bull; Modular subsystems to swap mid-season</span>
+            <span>&bull; CAD-first; document every iteration</span>
+            <span>&bull; Post-match reviews with data logs</span>
           </div>
         </div>
       </section>
@@ -79,33 +75,33 @@
           </div>
           <div class="tile-grid">
             <article class="tile">
-              <h3 class="card__title">2024–25: Endgame</h3>
+              <h3 class="card__title">2024-25: Endgame</h3>
               <p class="card__text">6WD tank drive, dual-stage elevator, and fast intake tuned for cycle speed.</p>
               <div class="spec-list">
-                <span>• Drivebase: 6WD tank</span>
-                <span>• Auton: 6/8 consistency in scrims</span>
-                <span>• Cycle: ~9s average</span>
-                <span>• Notes: lightweight intake swap mid-season improved reliability</span>
+                <span>&bull; Drivebase: 6WD tank</span>
+                <span>&bull; Auton: 6/8 consistency in scrims</span>
+                <span>&bull; Cycle: ~9s average</span>
+                <span>&bull; Notes: lightweight intake swap mid-season improved reliability</span>
               </div>
             </article>
             <article class="tile">
-              <h3 class="card__title">2023–24: Centerstage</h3>
+              <h3 class="card__title">2023-24: Centerstage</h3>
               <p class="card__text">Mecanum drive for mobility, arm-based scoring, emphasis on driver control.</p>
               <div class="spec-list">
-                <span>• Drivebase: Mecanum</span>
-                <span>• Auton: 4 consistent paths</span>
-                <span>• Cycle: ~11s average</span>
-                <span>• Notes: upgraded slides for smoother motion</span>
+                <span>&bull; Drivebase: Mecanum</span>
+                <span>&bull; Auton: 4 consistent paths</span>
+                <span>&bull; Cycle: ~11s average</span>
+                <span>&bull; Notes: upgraded slides for smoother motion</span>
               </div>
             </article>
             <article class="tile">
-              <h3 class="card__title">2022–23: PowerPlay</h3>
+              <h3 class="card__title">2022-23: PowerPlay</h3>
               <p class="card__text">Reliable drivetrain and cone handling with iterative claw design.</p>
               <div class="spec-list">
-                <span>• Drivebase: 6WD</span>
-                <span>• Auton: 3 paths</span>
-                <span>• Cycle: ~12s average</span>
-                <span>• Notes: focused on consistency and control</span>
+                <span>&bull; Drivebase: 6WD</span>
+                <span>&bull; Auton: 3 paths</span>
+                <span>&bull; Cycle: ~12s average</span>
+                <span>&bull; Notes: focused on consistency and control</span>
               </div>
             </article>
           </div>
@@ -115,7 +111,7 @@
 
     <footer class="site-footer">
       <div class="container footer__content">
-        <span>Alpine Robotics • FTC Team 25710</span>
+        <span>Alpine Robotics &bull; FTC Team 25710</span>
         <span>Contact: <a href="mailto:alpineroboticsftc@gmail.com">alpineroboticsftc@gmail.com</a></span>
       </div>
     </footer>
@@ -126,3 +122,5 @@
   <script src="../assets/js/main.js" type="module"></script>
 </body>
 </html>
+
+

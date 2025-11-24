@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery – Alpine Robotics 25710</title>
+  <title>Gallery - Alpine Robotics 25710</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
@@ -19,7 +18,7 @@
     gtag('config', 'G-J0RD2S0XPZ');
   </script>
 </head>
-<body>
+<body data-theme="light">
   <div class="page">
     <header class="site-header">
       <div class="container nav">
@@ -35,31 +34,22 @@
           <a class="nav__link nav__link--active" href="./gallery.html">Gallery</a>
           <a class="nav__link" href="./sponsors.html">Sponsors</a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle light or dark mode">
+          <span class="theme-toggle__sun" aria-hidden="true">☀️</span>
+          <span class="theme-toggle__moon" aria-hidden="true">🌙</span>
+        </button>
         <a class="nav__cta" href="./season.html#join">Join Us</a>
       </div>
     </header>
 
     <main>
-      <section class="sub-hero">
-        <div class="sub-hero__bg"></div>
-        <div class="sub-hero__parallax">
-          <div class="mountain mountain--ridge" data-parallax-layer data-speed="0.08"></div>
-          <div class="mountain mountain--back" data-parallax-layer data-speed="0.16"></div>
-          <div class="mountain mountain--mid" data-parallax-layer data-speed="0.28"></div>
-          <div class="mountain mountain--front" data-parallax-layer data-speed="0.5"></div>
+      <header class="page-heading">
+        <div class="container">
+          <span class="pill">Gallery</span>
+          <h1 class="page-heading__title">On the field and in the shop.</h1>
+          <p class="page-heading__lead">Highlights from competitions, outreach events, and late-night build sessions.</p>
         </div>
-        <div class="sub-hero__sky-objects">
-          <div class="sub-hero__sun">☀️</div>
-          <div class="sub-hero__moon">🌙</div>
-        </div>
-        <div class="container sub-hero__content">
-          <div>
-            <span class="pill">Gallery</span>
-            <h1 class="hero__title">On the field and in the shop.</h1>
-            <p class="lead">Highlights from competitions, outreach events, and late-night build sessions.</p>
-          </div>
-        </div>
-      </section>
+      </header>
 
       <section class="section">
         <div class="container stack">
@@ -115,12 +105,11 @@
                 <p class="muted">STEM workshop and robot demo.</p>
               </div>
             </article>
-            <!-- Placeholder competition slot -->
             <article class="gallery-card" data-category="competition">
               <img src="../images/banner.png" loading="lazy" decoding="async" sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw" alt="Competition field placeholder">
               <div class="gallery-card__body">
                 <strong>Competition coming soon</strong>
-                <p class="muted">We’ll add DECODE event shots here.</p>
+                <p class="muted">We'll add DECODE event shots here.</p>
               </div>
             </article>
           </div>
@@ -133,7 +122,7 @@
 
     <footer class="site-footer">
       <div class="container footer__content">
-        <span>Alpine Robotics • FTC Team 25710</span>
+        <span>Alpine Robotics &bull; FTC Team 25710</span>
         <span>Contact: <a href="mailto:alpineroboticsftc@gmail.com">alpineroboticsftc@gmail.com</a></span>
       </div>
     </footer>
@@ -145,3 +134,5 @@
   <script src="../assets/js/gallery.js" type="module"></script>
 </body>
 </html>
+
+

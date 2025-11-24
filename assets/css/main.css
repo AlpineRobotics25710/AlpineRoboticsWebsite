@@ -233,14 +233,15 @@ header.site-header {
 
 .hero {
   position: relative;
-  padding: var(--space-10, 2.5rem) 0 var(--space-16, 4rem);
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 6.5rem);
   overflow: hidden;
-  min-height: 68vh;
+  min-height: clamp(600px, 85vh, 880px);
 }
 
 .hero__bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
   pointer-events: none;
   background: linear-gradient(180deg, var(--hero-sky-start) 0%, var(--hero-sky-mid) 40%, var(--hero-sky-end) 100%);
   transition: background var(--duration-base) var(--easing-smooth);
@@ -251,37 +252,43 @@ header.site-header {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1px;
-  height: 0;
-  background: transparent;
+  bottom: 0;
+  height: 180px;
+  background: linear-gradient(180deg, rgba(247, 251, 255, 0) 0%, var(--section-bg) 80%);
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
+}
+
+[data-theme="dark"] .hero::after {
+  background: linear-gradient(180deg, rgba(3, 6, 11, 0) 0%, var(--section-bg) 80%);
 }
 
 .hero__parallax {
   position: absolute;
   inset: 0;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero__sky-objects {
   position: absolute;
-  top: 0;
+  top: -10px;
   right: 8%;
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   pointer-events: none;
+  z-index: 3;
 }
 
 .sun,
 .moon {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 78px;
+  font-size: 84px;
   line-height: 1;
   filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.12));
   transform: translateY(0);
@@ -294,7 +301,7 @@ header.site-header {
   top: 10px;
   right: 0;
   opacity: 1;
-  color: #ffc800;
+  color: #ffc727;
   text-shadow: 0 0 16px rgba(255, 200, 0, 0.35);
 }
 
@@ -303,7 +310,7 @@ header.site-header {
   top: -140px;
   right: 10px;
   opacity: 0;
-  color: #c6d7ff;
+  color: #dce9ff;
   text-shadow: 0 0 16px rgba(198, 215, 255, 0.35);
 }
 
@@ -376,6 +383,7 @@ header.site-header {
 
 .hero__content {
   position: relative;
+  z-index: 3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: center;
@@ -424,7 +432,7 @@ header.site-header {
   align-items: center;
   gap: var(--space-4);
   margin-top: var(--space-6);
-  margin-bottom: var(--space-7);
+  margin-bottom: var(--space-8);
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -463,13 +471,17 @@ header.site-header {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
   gap: var(--space-5);
-  margin-top: var(--space-12);
-  margin-bottom: var(--space-12);
-  align-items: start;
-  justify-items: center;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-10);
+  align-items: stretch;
+  justify-content: center;
+  justify-items: stretch;
   width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .metric {
@@ -479,10 +491,8 @@ header.site-header {
   background: rgba(255, 255, 255, 0.96);
   color: var(--text-primary);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
-  min-width: 220px;
   min-height: 150px;
   width: 100%;
-  max-width: 260px;
   text-align: center;
   display: grid;
   align-content: center;
@@ -622,18 +632,15 @@ body[data-theme="dark"] .hero__badge {
 }
 
 .hero + .section {
-  margin-top: 0;
-  padding-top: var(--space-12);
+  margin-top: -40px;
+  padding-top: calc(var(--space-12) + 40px);
   z-index: 2;
 }
 
 .section__header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--space-4);
-  margin-bottom: var(--space-6);
-  flex-wrap: wrap;
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: var(--space-5);
 }
 
 .section__title {
@@ -644,39 +651,18 @@ body[data-theme="dark"] .hero__badge {
 }
 
 .section__description {
-  max-width: 52ch;
+  max-width: 58ch;
   color: var(--text-secondary);
   margin: 0;
-  flex-basis: 100%;
 }
 
-/* Light mode: stack heading and paragraph vertically and align left */
-body[data-theme="light"] .section__header {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.9rem;
+.section--whats-next .section__header {
+  margin-bottom: var(--space-4);
+  gap: 0.8rem;
 }
 
-body[data-theme="light"] .section__description {
-  margin-bottom: 1.35rem;
-}
-
-@media (min-width: 768px) {
-  body[data-theme="light"] .section__header {
-    gap: 1rem;
-  }
-  body[data-theme="light"] .section__description {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  body[data-theme="light"] .section__header {
-    gap: 1.05rem;
-  }
-  body[data-theme="light"] .section__description {
-    margin-bottom: 1.65rem;
-  }
+.section--whats-next .card-grid {
+  margin-top: var(--space-5);
 }
 
 .card-grid {

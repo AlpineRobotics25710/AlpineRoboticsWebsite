@@ -118,21 +118,25 @@ function initMountainParallax() {
   window.addEventListener("scroll", onScroll);
 }
 
-function initSubHeroParallax() {
-  if (prefersReducedMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
-  gsap.registerPlugin(ScrollTrigger);
-  const subHeroes = document.querySelectorAll(".sub-hero__bg");
-  subHeroes.forEach((bg) => {
-    gsap.to(bg, {
-      yPercent: -8,
-      ease: "none",
-      scrollTrigger: {
-        trigger: bg.parentElement,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true
-      }
-    });
+function applyTheme(theme) {
+  const target = document.body;
+  target.setAttribute("data-theme", theme);
+}
+
+function initThemeToggle() {
+  const toggle = document.querySelector(".theme-toggle");
+  const stored = localStorage.getItem(storageKey);
+  const initial = stored === "dark" ? "dark" : "light";
+  applyTheme(initial);
+  if (!toggle) return;
+  toggle.setAttribute("aria-pressed", String(initial === "dark"));
+
+  toggle.addEventListener("click", () => {
+    const current = document.body.getAttribute("data-theme") || "light";
+    const next = current === "light" ? "dark" : "light";
+    applyTheme(next);
+    localStorage.setItem(storageKey, next);
+    toggle.setAttribute("aria-pressed", String(next === "dark"));
   });
 }
 
@@ -142,25 +146,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveals();
   initMountainParallax();
   initThemeToggle();
-  initSubHeroParallax();
 });
-
-function applyTheme(theme) {
-  const target = document.body;
-  target.setAttribute("data-theme", theme);
-}
-
-function initThemeToggle() {
-  const toggle = document.querySelector(".theme-toggle");
-  if (!toggle) return;
-  const stored = localStorage.getItem(storageKey);
-  const initial = stored === "dark" ? "dark" : "light";
-  applyTheme(initial);
-
-  toggle.addEventListener("click", () => {
-    const current = document.body.getAttribute("data-theme") || "light";
-    const next = current === "light" ? "dark" : "light";
-    applyTheme(next);
-    localStorage.setItem(storageKey, next);
-  });
-}
