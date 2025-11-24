@@ -106,79 +106,54 @@
                 <stop offset="0%" stop-color="var(--foreground-start)" />
                 <stop offset="100%" stop-color="var(--foreground-end)" />
               </linearGradient>
+              <symbol id="treeBack" viewBox="0 0 60 120">
+                <path class="tree__shape" d="M30 0 L55 78 L30 60 L5 78 Z" />
+                <path class="tree__shape--trunk" d="M26 60 h8 v34 a2 2 0 0 1-8 0z" />
+              </symbol>
+              <symbol id="treeFront" viewBox="0 0 70 140">
+                <path class="tree__shape" d="M35 0 L67 95 L35 76 L3 95 Z" />
+                <path class="tree__shape--trunk" d="M30 76 h10 v40 a2 2 0 0 1-10 0z" />
+              </symbol>
             </defs>
+            <g class="parallax-layer layer0" id="mountains-far">
+              <path d="M0 360 L200 332 L420 348 L650 330 L920 350 L1180 332 L1400 350 L1600 338 L1600 520 L0 520 Z" />
+            </g>
             <g class="parallax-layer layer1" id="mountains-back">
-              <path d="M0 420 L260 400 L520 412 L780 398 L1040 415 L1300 406 L1600 414 L1600 520 L0 520 Z" />
+              <path d="M0 395 L240 370 L520 386 L780 372 L1040 390 L1300 380 L1600 390 L1600 520 L0 520 Z" />
             </g>
             <g class="parallax-layer layer2" id="mountains-mid">
-              <path d="M0 450 L220 428 L460 438 L700 430 L960 444 L1220 434 L1460 444 L1600 438 L1600 520 L0 520 Z" />
+              <path d="M0 430 L220 408 L460 420 L700 410 L960 426 L1220 415 L1460 428 L1600 422 L1600 520 L0 520 Z" />
             </g>
             <g class="parallax-layer layer3" id="trees-back">
-              <g class="tree" transform="translate(80 470) scale(1.05)">
-                <polygon class="tree__leaves" points="0,0 26,-90 52,0" />
-                <rect class="tree__trunk" x="22" y="0" width="8" height="30" rx="2" />
-              </g>
-              <g class="tree" transform="translate(240 478) scale(0.92)">
-                <polygon class="tree__leaves" points="0,0 26,-82 52,0" />
-                <rect class="tree__trunk" x="22" y="0" width="8" height="26" rx="2" />
-              </g>
-              <g class="tree" transform="translate(420 472) scale(1.1)">
-                <polygon class="tree__leaves" points="0,0 28,-96 56,0" />
-                <rect class="tree__trunk" x="24" y="0" width="8" height="30" rx="2" />
-              </g>
-              <g class="tree" transform="translate(620 480) scale(0.95)">
-                <polygon class="tree__leaves" points="0,0 24,-86 48,0" />
-                <rect class="tree__trunk" x="20" y="0" width="8" height="28" rx="2" />
-              </g>
-              <g class="tree" transform="translate(820 475) scale(1.05)">
-                <polygon class="tree__leaves" points="0,0 26,-92 52,0" />
-                <rect class="tree__trunk" x="22" y="0" width="8" height="30" rx="2" />
-              </g>
-              <g class="tree" transform="translate(1020 480) scale(0.98)">
-                <polygon class="tree__leaves" points="0,0 26,-88 52,0" />
-                <rect class="tree__trunk" x="22" y="0" width="8" height="28" rx="2" />
-              </g>
-              <g class="tree" transform="translate(1220 476) scale(1.08)">
-                <polygon class="tree__leaves" points="0,0 28,-98 56,0" />
-                <rect class="tree__trunk" x="24" y="0" width="8" height="32" rx="2" />
-              </g>
-              <g class="tree" transform="translate(1420 480) scale(0.96)">
-                <polygon class="tree__leaves" points="0,0 24,-86 48,0" />
-                <rect class="tree__trunk" x="20" y="0" width="8" height="28" rx="2" />
-              </g>
+              <use href="#treeBack" x="60" y="430" />
+              <use href="#treeBack" x="220" y="438" transform="scale(1.06)" />
+              <use href="#treeBack" x="400" y="432" transform="scale(1.12)" />
+              <use href="#treeBack" x="600" y="442" transform="scale(0.98)" />
+              <use href="#treeBack" x="800" y="436" transform="scale(1.08)" />
+              <use href="#treeBack" x="1000" y="442" transform="scale(1.02)" />
+              <use href="#treeBack" x="1200" y="438" transform="scale(1.1)" />
+              <use href="#treeBack" x="1400" y="442" transform="scale(0.96)" />
             </g>
-            <g class="parallax-layer layer4" id="trees-front">
-              <g class="tree" transform="translate(140 500) scale(1.25)">
-                <polygon class="tree__leaves" points="0,0 30,-105 60,0" />
-                <rect class="tree__trunk" x="26" y="0" width="8" height="34" rx="2" />
-              </g>
-              <g class="tree" transform="translate(360 508) scale(1.12)">
-                <polygon class="tree__leaves" points="0,0 28,-98 56,0" />
-                <rect class="tree__trunk" x="24" y="0" width="8" height="32" rx="2" />
-              </g>
-              <g class="tree" transform="translate(580 502) scale(1.18)">
-                <polygon class="tree__leaves" points="0,0 30,-102 60,0" />
-                <rect class="tree__trunk" x="26" y="0" width="8" height="34" rx="2" />
-              </g>
-              <g class="tree" transform="translate(800 510) scale(1.08)">
-                <polygon class="tree__leaves" points="0,0 26,-94 52,0" />
-                <rect class="tree__trunk" x="22" y="0" width="8" height="30" rx="2" />
-              </g>
-              <g class="tree" transform="translate(1020 506) scale(1.2)">
-                <polygon class="tree__leaves" points="0,0 30,-104 60,0" />
-                <rect class="tree__trunk" x="26" y="0" width="8" height="34" rx="2" />
-              </g>
-              <g class="tree" transform="translate(1240 508) scale(1.1)">
-                <polygon class="tree__leaves" points="0,0 28,-100 56,0" />
-                <rect class="tree__trunk" x="24" y="0" width="8" height="32" rx="2" />
-              </g>
-              <g class="tree" transform="translate(1440 504) scale(1.22)">
-                <polygon class="tree__leaves" points="0,0 30,-106 60,0" />
-                <rect class="tree__trunk" x="26" y="0" width="8" height="34" rx="2" />
-              </g>
+            <g class="parallax-layer layer4" id="trees-mid">
+              <use href="#treeBack" x="120" y="452" transform="scale(1.18)" />
+              <use href="#treeBack" x="340" y="462" transform="scale(1.08)" />
+              <use href="#treeBack" x="560" y="456" transform="scale(1.16)" />
+              <use href="#treeBack" x="780" y="466" transform="scale(1.04)" />
+              <use href="#treeBack" x="1000" y="460" transform="scale(1.2)" />
+              <use href="#treeBack" x="1220" y="462" transform="scale(1.06)" />
+              <use href="#treeBack" x="1420" y="458" transform="scale(1.22)" />
             </g>
-            <g class="parallax-layer layer5" id="foreground-gradient">
-              <rect x="0" y="500" width="1600" height="60" fill="url(#foregroundGradient)" />
+            <g class="parallax-layer layer5" id="trees-front">
+              <use href="#treeFront" x="80" y="470" transform="scale(1.18)" />
+              <use href="#treeFront" x="320" y="480" transform="scale(1.08)" />
+              <use href="#treeFront" x="560" y="474" transform="scale(1.18)" />
+              <use href="#treeFront" x="780" y="486" transform="scale(1.06)" />
+              <use href="#treeFront" x="1020" y="480" transform="scale(1.22)" />
+              <use href="#treeFront" x="1240" y="482" transform="scale(1.1)" />
+              <use href="#treeFront" x="1440" y="478" transform="scale(1.26)" />
+            </g>
+            <g class="parallax-layer layer6" id="foreground-gradient">
+              <rect x="0" y="490" width="1600" height="70" fill="url(#foregroundGradient)" />
             </g>
           </svg>
         </div>

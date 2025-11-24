@@ -269,7 +269,7 @@ header.site-header {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 160px;
+  height: 120px;
   background: linear-gradient(180deg, rgba(247, 251, 255, 0) 0%, var(--section-bg) 80%);
   pointer-events: none;
   z-index: 2;
@@ -298,8 +298,8 @@ header.site-header {
 .hero-content {
   position: relative;
   z-index: 10;
-  padding-top: 160px;
-  padding-bottom: 140px;
+  padding-top: 140px;
+  padding-bottom: 120px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-8);
