@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function applyTheme(theme) {
-  const root = document.documentElement;
-  root.setAttribute("data-theme", theme);
+  const target = document.body;
+  target.setAttribute("data-theme", theme);
 }
 
 function initThemeToggle() {
@@ -109,7 +109,7 @@ function initThemeToggle() {
   applyTheme(initial);
 
   toggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme") || "light";
+    const current = document.body.getAttribute("data-theme") || "light";
     const next = current === "light" ? "dark" : "light";
     applyTheme(next);
     localStorage.setItem(storageKey, next);

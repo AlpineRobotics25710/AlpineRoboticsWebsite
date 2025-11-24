@@ -1,6 +1,6 @@
 /* Design tokens mirror assets/css/_variables.scss */
 :root {
-  --color-bg-dark: #1a1a1a;
+  --color-bg-dark: #0b1014;
   --color-bg-light: #eef6ff;
   --color-surface: #ffffff;
   --color-forest: #14532d;
@@ -9,14 +9,20 @@
   --color-muted: #4a5b66;
   --color-border: rgba(20, 35, 42, 0.12);
   --color-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  --nav-bg: rgba(233, 244, 255, 0.98);
+  --nav-text: #0f2014;
   --hero-sky-start: #e9f4ff;
   --hero-sky-mid: #edf7ff;
   --hero-sky-end: #e4f2ff;
   --hero-text: #0f2014;
+  --hero-muted: #2a3a3f;
   --section-bg: #f7fbff;
   --card-bg: #ffffff;
   --card-text: #0f2014;
   --card-muted: #2a3a3f;
+  --btn-ghost-bg: rgba(255, 255, 255, 0.9);
+  --btn-ghost-border: rgba(15, 32, 20, 0.2);
+  --btn-ghost-text: #0f2014;
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
   --max-width: 1200px;
@@ -46,14 +52,20 @@ body[data-theme="dark"] {
   --color-muted: #d7e1e5;
   --color-border: rgba(255, 255, 255, 0.12);
   --color-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  --nav-bg: rgba(12, 17, 24, 0.9);
+  --nav-text: #e7f2ff;
   --hero-sky-start: #0b1221;
   --hero-sky-mid: #0d1528;
   --hero-sky-end: #0a1221;
-  --hero-text: #e7f2ff;
+  --hero-text: #f9fafb;
+  --hero-muted: #d7e1e5;
   --section-bg: #0f151a;
   --card-bg: #121b22;
   --card-text: #e7f2ff;
   --card-muted: #c5d1d8;
+  --btn-ghost-bg: rgba(255, 255, 255, 0.08);
+  --btn-ghost-border: rgba(255, 255, 255, 0.35);
+  --btn-ghost-text: #f9fafb;
 }
 
 *,
@@ -96,9 +108,9 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(233, 244, 255, 0.98);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(20, 83, 45, 0.1);
+  border-bottom: 1px solid var(--color-border);
   transition: background var(--duration-base) var(--easing-smooth), border-color var(--duration-base) var(--easing-smooth);
 }
 
@@ -117,7 +129,7 @@ header.site-header {
   gap: var(--space-2);
   font-weight: 800;
   letter-spacing: 0.5px;
-  color: var(--card-text, #0f2014);
+  color: var(--nav-text);
 }
 .nav__brand img {
   height: 68px;
@@ -174,7 +186,7 @@ header.site-header {
 .nav__link {
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-sm);
-  color: var(--card-text, #0f2014);
+  color: var(--nav-text);
   font-weight: 600;
   transition: color var(--duration-fast) var(--easing-smooth),
     background var(--duration-fast) var(--easing-smooth),
@@ -183,7 +195,7 @@ header.site-header {
 
 .nav__link:hover,
 .nav__link--active {
-  color: #0b0f0c;
+  color: var(--hero-text);
   background: rgba(34, 197, 94, 0.12);
 }
 
@@ -393,7 +405,7 @@ header.site-header {
 }
 
 .hero__subtitle {
-  color: var(--color-muted);
+  color: var(--hero-muted, var(--color-muted));
   font-size: 1.06rem;
   max-width: 48ch;
   line-height: 1.6;
@@ -430,9 +442,9 @@ header.site-header {
 }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(15, 32, 20, 0.3);
-  color: #0f2014;
+  background: var(--btn-ghost-bg);
+  border-color: var(--btn-ghost-border);
+  color: var(--btn-ghost-text);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
@@ -486,6 +498,13 @@ header.site-header {
   color: #0f2014;
 }
 
+body[data-theme="dark"] .hero__card {
+  background: rgba(17, 24, 31, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e7f2ff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
 .hero__badge {
   display: inline-flex;
   align-items: center;
@@ -493,7 +512,7 @@ header.site-header {
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
   background: rgba(34, 197, 94, 0.16);
-  color: #0f2014;
+  color: var(--card-text);
   border: 1px solid rgba(34, 197, 94, 0.35);
   font-weight: 700;
   margin-bottom: var(--space-4);
@@ -577,6 +596,13 @@ header.site-header {
   transition: transform var(--duration-base) var(--easing-smooth),
     border-color var(--duration-base) var(--easing-smooth),
     box-shadow var(--duration-base) var(--easing-smooth);
+}
+
+body[data-theme="dark"] .card {
+  background: #121b22;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid rgba(34, 197, 94, 0.5);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
