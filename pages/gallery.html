@@ -10,6 +10,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/gallery.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0RD2S0XPZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -46,78 +47,37 @@
       <header class="page-heading">
         <div class="container">
           <span class="pill">Gallery</span>
-          <h1 class="page-heading__title">On the field and in the shop.</h1>
-          <p class="page-heading__lead">Highlights from competitions, outreach events, and late-night build sessions.</p>
+          <h1 class="page-heading__title">On the field, in the shop, and with our community.</h1>
+          <p class="page-heading__lead">Browse every outreach and event. Use the sidebar to jump between galleries; tap any photo to view full screen.</p>
         </div>
       </header>
 
       <section class="section">
-        <div class="container stack">
-          <div class="section__header">
-            <h2 class="section__title">Highlights</h2>
-            <p class="section__description">Use filters to jump to events; tap an image to zoom.</p>
+        <div class="gallery-layout container">
+          <aside class="gallery-sidebar" aria-label="Gallery navigation">
+            <div class="sidebar__header">
+              <h2>Outreach</h2>
+              <button class="sidebar__toggle" aria-expanded="false" aria-controls="sidebar-nav">
+                <span class="sidebar__icon"></span>
+                <span class="sr-only">Toggle sidebar</span>
+              </button>
+            </div>
+            <nav id="sidebar-nav" class="sidebar__nav"></nav>
+          </aside>
+
+          <div class="gallery-content">
+            <div id="gallery-sections"></div>
           </div>
-          <div class="gallery-filters" role="tablist">
-            <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-            <button class="filter-btn" data-filter="outreach" role="tab" aria-selected="false">Outreach</button>
-            <button class="filter-btn" data-filter="competition" role="tab" aria-selected="false">Competition</button>
-          </div>
-          <div class="gallery-grid">
-            <article class="gallery-card" data-category="outreach">
-              <img src="../images/galleryImages/MercerCountyFair/Fair1.jpg" loading="lazy" decoding="async" sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw" alt="Team members showcasing robot at Mercer County Fair">
-              <div class="gallery-card__body">
-                <strong>Mercer County Fair</strong>
-                <p class="muted">Community demo and STEM outreach.</p>
-              </div>
-            </article>
-            <article class="gallery-card" data-category="outreach">
-              <img src="../images/galleryImages/MercerCountyFair/Fair2.jpg" loading="lazy" decoding="async" sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw" alt="Robot demonstration with students watching">
-              <div class="gallery-card__body">
-                <strong>Fair demos</strong>
-                <p class="muted">Hands-on controls for visitors.</p>
-              </div>
-            </article>
-            <article class="gallery-card" data-category="outreach">
-              <img src="../images/galleryImages/MercerCountyFair/Fair3.jpg" loading="lazy" decoding="async" sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw" alt="Team 25710 booth with robot setup">
-              <div class="gallery-card__body">
-                <strong>Pit setup</strong>
-                <p class="muted">Sharing our build process and strategy.</p>
-              </div>
-            </article>
-            <article class="gallery-card" data-category="outreach">
-              <img src="../images/galleryImages/MercerCountyFair/Fair4.jpg" loading="lazy" decoding="async" sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw" alt="Kids exploring the robot controls">
-              <div class="gallery-card__body">
-                <strong>Engaging future builders</strong>
-                <p class="muted">Letting kids try the controls safely.</p>
-              </div>
-            </article>
-            <article class="gallery-card" data-category="outreach">
-              <img src="../images/galleryImages/MercerCountyFair/Fair5.jpg" loading="lazy" decoding="async" sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw" alt="Team explaining robot mechanisms to attendees">
-              <div class="gallery-card__body">
-                <strong>Mechanism deep dive</strong>
-                <p class="muted">Walking through intake and lift design.</p>
-              </div>
-            </article>
-            <article class="gallery-card" data-category="outreach">
-              <img src="../images/galleryImages/NJLeepOutreach/NJLeep1.jpg" loading="lazy" decoding="async" sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw" alt="Outreach event with students at NJ LEEP">
-              <div class="gallery-card__body">
-                <strong>NJ LEEP Outreach</strong>
-                <p class="muted">STEM workshop and robot demo.</p>
-              </div>
-            </article>
-            <article class="gallery-card" data-category="competition">
-              <img src="../images/banner.png" loading="lazy" decoding="async" sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 90vw" alt="Competition field placeholder">
-              <div class="gallery-card__body">
-                <strong>Competition coming soon</strong>
-                <p class="muted">We'll add DECODE event shots here.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="lightbox" aria-hidden="true">
-          <img src="" alt="">
         </div>
       </section>
+
+      <div class="lightbox" aria-hidden="true" role="dialog">
+        <div class="lightbox__backdrop"></div>
+        <div class="lightbox__content">
+          <button class="lightbox__close" aria-label="Close image">&times;</button>
+          <img src="" alt="">
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -134,5 +94,6 @@
   <script src="../assets/js/gallery.js" type="module"></script>
 </body>
 </html>
+
 
 
