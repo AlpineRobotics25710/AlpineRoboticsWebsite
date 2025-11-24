@@ -1,5 +1,7 @@
 import { team } from "../data/teamData.js";
 
+const fallbackImage = "../images/team/default.svg";
+
 const groups = [
   { key: "captains", title: "Captains", targetId: "team-captains" },
   { key: "leads", title: "Subsystem Leads", targetId: "team-leads" },
@@ -12,12 +14,16 @@ groups.forEach(({ key }) => {
   (team[key] || []).forEach((m) => allMembers.push(m));
 });
 
+function resolveImage(src) {
+  return src && src.trim().length ? src : fallbackImage;
+}
+
 function createCard(member, index) {
-  const img = member.image || "../images/team/default.jpg";
+  const img = resolveImage(member.image);
   const btn = member.bio || member.funfact || member.links ? `<button class="team-card__btn" data-profile="${index}">View Profile</button>` : "";
   return `
     <article class="card team-card-modern" data-index="${index}">
-      <img class="team-card__avatar" src="${img}" alt="${member.name} headshot" loading="lazy" decoding="async">
+      <img class="team-card__avatar" src="${img}" alt="${member.name} headshot" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallbackImage}'">
       <p class="team-card__role">${member.role}</p>
       <h3 class="team-card__name">${member.name}</h3>
       <p class="team-card__summary">${member.summary || ""}</p>
@@ -54,7 +60,7 @@ function renderGroup({ key, title, targetId }) {
 
 function buildModal() {
   const modal = document.createElement("div");
-  modal.className = "modal";
+  modal.className = "modal team-modal";
   modal.setAttribute("aria-hidden", "true");
   modal.innerHTML = `
     <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-name">
@@ -85,12 +91,18 @@ function updateModal(modal, member) {
   const meta = modal.querySelector(".modal__meta");
   const funfact = modal.querySelector(".modal__funfact");
 
-  avatar.src = member.image || "../images/team/default.jpg";
+  const safeSrc = resolveImage(member.image);
+  avatar.src = safeSrc;
+  avatar.onerror = () => {
+    avatar.onerror = null;
+    avatar.src = fallbackImage;
+  };
   avatar.alt = `${member.name} headshot`;
   role.textContent = member.role || "";
   name.textContent = member.name || "";
   bio.textContent = member.bio || member.summary || "";
-  funfact.textContent = member.funfact ? `Fun fact: ${member.funfact}` : "";
+  funfact.textContent = member.funfact || "";
+  funfact.classList.toggle("is-empty", !member.funfact);
 
   const links = [];
   if (member.email) links.push(`<a class="badge-link" href="mailto:${member.email}">Email</a>`);

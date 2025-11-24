@@ -27,7 +27,7 @@ export const team = {
       summary: "TeleOp controls, mechanism automation, and autonomous assists.",
       bio: "Prathyush focuses on TeleOp command mapping and automated sequences. He pairs with build to keep code and mechanisms aligned.",
       email: "prathyush@example.com",
-      funfact: "Writes macros for everythingâ€”including snacks.",
+      funfact: "Writes macros for everything — including snacks.",
       links: { github: "https://github.com/example-prathyush" }
     }
   ],
@@ -72,7 +72,7 @@ export const team = {
       role: "Build / Pit",
       image: "../images/team/alex.jpg",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
-      bio: "Alex keeps the bot match-readyâ€”pit checks, drivetrain upkeep, and between-match fixes.",
+      bio: "Alex keeps the bot match-ready — pit checks, drivetrain upkeep, and between-match fixes.",
       funfact: "Knows every pit tool by weight."
     }
   ],
