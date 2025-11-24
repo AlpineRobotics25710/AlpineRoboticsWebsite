@@ -254,9 +254,11 @@ header.site-header {
   filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.12));
   transform: translateY(0);
   transition: transform 600ms var(--easing-smooth), opacity 400ms var(--easing-smooth);
+  overflow: visible;
 }
 
 .sun {
+  position: relative;
   background: radial-gradient(circle at 30% 30%, #fff6d5, #ffd86f);
   top: 10px;
   right: 0;
@@ -264,8 +266,21 @@ header.site-header {
   box-shadow: 0 0 0 8px rgba(255, 216, 111, 0.2), 0 0 18px rgba(255, 216, 111, 0.35);
 }
 
+.sun::after {
+  content: "";
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(255, 216, 111, 0.45), transparent 40%, rgba(255, 216, 111, 0.5), transparent 70%, rgba(255, 216, 111, 0.35), transparent);
+  filter: blur(4px);
+  z-index: -1;
+  animation: sun-spin 18s linear infinite;
+}
+
 .moon {
-  background: radial-gradient(circle at 40% 35%, #e6f0ff, #a8b9ff);
+  position: relative;
+  background: radial-gradient(circle at 40% 40%, #e7ecff 62%, #bfc7ff 75%, transparent 76%),
+    radial-gradient(circle at 55% 45%, transparent 58%, #0f151a 59%);
   top: -140px;
   right: 10px;
   opacity: 0;
