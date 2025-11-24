@@ -270,60 +270,6 @@ header.site-header {
   z-index: 1;
 }
 
-.hero__sky-objects {
-  position: absolute;
-  top: -10px;
-  right: 8%;
-  width: 150px;
-  height: 150px;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.sun,
-.moon {
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 84px;
-  line-height: 1;
-  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.12));
-  transform: translateY(0);
-  transition: transform 600ms var(--easing-smooth), opacity 400ms var(--easing-smooth);
-  overflow: visible;
-}
-
-.sun {
-  position: relative;
-  top: 10px;
-  right: 0;
-  opacity: 1;
-  color: #ffc727;
-  text-shadow: 0 0 16px rgba(255, 200, 0, 0.35);
-}
-
-.moon {
-  position: relative;
-  top: -140px;
-  right: 10px;
-  opacity: 0;
-  color: #dce9ff;
-  text-shadow: 0 0 16px rgba(198, 215, 255, 0.35);
-}
-
-[data-theme="dark"] .sun {
-  transform: translateY(200px);
-  opacity: 0;
-}
-
-[data-theme="dark"] .moon {
-  transform: translateY(180px);
-  opacity: 1;
-}
-
 [data-theme="dark"] .hero__bg {
   background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.04), transparent 45%), linear-gradient(180deg, #0a1221 0%, #0c1527 40%, #0a1221 100%);
 }
