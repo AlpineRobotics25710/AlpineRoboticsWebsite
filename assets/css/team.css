@@ -186,9 +186,9 @@
 
 .modal__header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: minmax(120px, 140px) 1fr;
   gap: var(--space-5);
-  align-items: center;
+  align-items: start;
   margin-bottom: var(--space-4);
 }
 
@@ -199,6 +199,7 @@
   object-fit: cover;
   border: 2px solid rgba(34, 197, 94, 0.35);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+  display: block;
 }
 
 .modal__name {
@@ -212,6 +213,7 @@
   color: var(--color-accent);
   font-weight: 600;
   letter-spacing: 0.2px;
+  line-height: 1.3;
 }
 
 .modal__body {
@@ -219,7 +221,7 @@
   gap: var(--space-3);
   color: var(--text-secondary);
   font-size: 1.02rem;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .modal__meta {
@@ -233,6 +235,7 @@
   color: var(--text-secondary);
   font-style: italic;
   margin-top: var(--space-2);
+  line-height: 1.4;
 }
 
 .modal__funfact::before {
