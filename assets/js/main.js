@@ -70,6 +70,21 @@ function initScrollReveals() {
       }
     });
   });
+
+  const tiles = document.querySelectorAll(".tile, .list-tile, .team-card, .gallery-card, .contact-card");
+  tiles.forEach((el) => {
+    gsap.from(el, {
+      opacity: 0,
+      y: 24,
+      duration: 0.7,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 88%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
 }
 
 function initMountainParallax() {
@@ -103,12 +118,31 @@ function initMountainParallax() {
   window.addEventListener("scroll", onScroll);
 }
 
+function initSubHeroParallax() {
+  if (prefersReducedMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+  gsap.registerPlugin(ScrollTrigger);
+  const subHeroes = document.querySelectorAll(".sub-hero__bg");
+  subHeroes.forEach((bg) => {
+    gsap.to(bg, {
+      yPercent: -8,
+      ease: "none",
+      scrollTrigger: {
+        trigger: bg.parentElement,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initHeroAnimations();
   initParallax();
   initScrollReveals();
   initMountainParallax();
   initThemeToggle();
+  initSubHeroParallax();
 });
 
 function applyTheme(theme) {
