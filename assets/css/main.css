@@ -654,11 +654,29 @@ body[data-theme="dark"] .hero__badge {
 body[data-theme="light"] .section__header {
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.4rem;
+  gap: 0.9rem;
 }
 
 body[data-theme="light"] .section__description {
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.35rem;
+}
+
+@media (min-width: 768px) {
+  body[data-theme="light"] .section__header {
+    gap: 1rem;
+  }
+  body[data-theme="light"] .section__description {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body[data-theme="light"] .section__header {
+    gap: 1.05rem;
+  }
+  body[data-theme="light"] .section__description {
+    margin-bottom: 1.65rem;
+  }
 }
 
 .card-grid {
