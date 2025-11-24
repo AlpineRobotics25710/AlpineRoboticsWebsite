@@ -61,7 +61,7 @@ function buildModal() {
       <button class="modal__close" aria-label="Close profile">&times;</button>
       <div class="modal__header">
         <img class="modal__avatar" src="" alt="">
-        <div>
+        <div class="modal__text">
           <p class="modal__role"></p>
           <h3 class="modal__name" id="modal-name"></h3>
         </div>
