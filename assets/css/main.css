@@ -453,23 +453,26 @@ header.site-header {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-5);
   margin-top: var(--space-12);
   margin-bottom: var(--space-12);
   align-items: start;
   justify-items: center;
+  width: 100%;
 }
 
 .metric {
   padding: var(--space-4);
   border: 1px solid rgba(15, 32, 20, 0.08);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.94);
   color: var(--text-primary);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
   min-width: 220px;
-  min-height: 140px;
+  min-height: 150px;
+  width: 100%;
+  max-width: 260px;
   text-align: center;
   display: grid;
   align-content: center;
@@ -745,8 +748,8 @@ footer.site-footer {
 
 @media (min-width: 768px) {
   .metrics {
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
-    max-width: 900px;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    max-width: 960px;
     margin-top: var(--space-12);
     margin-bottom: var(--space-12);
   }
