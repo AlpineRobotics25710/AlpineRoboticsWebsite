@@ -29,7 +29,13 @@ Modern static site for FTC Team 25710 with light/dark theming, animated hero, an
 
 ## Running checks
 - Open `index.html` in a browser; theme toggle should persist.
-- For performance/accessibility, run Lighthouse in Chrome and verify contrast in both themes.
+- Lighthouse (Chrome DevTools):
+  1) Open DevTools → Lighthouse → check Performance/Accessibility/Best Practices/SEO.
+  2) Run for both mobile and desktop.
+  3) Verify contrast in both light/dark themes and that `prefers-reduced-motion` skips animations.
+- Quick AX sanity:
+  - Ensure all images have `alt`.
+  - Tab through nav/toggle/CTAs to confirm focus states are visible.
 
 ## Analytics
 - Google Tag Manager is included in page heads; CTA buttons carry `data-gtag` attributes to track key actions.
