@@ -55,6 +55,21 @@ function initScrollReveals() {
       }
     });
   });
+
+  const headers = document.querySelectorAll(".section__header");
+  headers.forEach((el) => {
+    gsap.from(el, {
+      opacity: 0,
+      y: 24,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
 }
 
 function initMountainParallax() {
