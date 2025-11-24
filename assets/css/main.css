@@ -223,7 +223,7 @@ header.site-header {
 
 .hero {
   position: relative;
-  padding: var(--space-9, 2.25rem) 0 var(--space-10, 2.5rem);
+  padding: var(--space-10, 2.5rem) 0 var(--space-14, 3.5rem);
   overflow: hidden;
   min-height: 68vh;
 }
@@ -414,6 +414,7 @@ header.site-header {
   align-items: center;
   gap: var(--space-4);
   margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -454,7 +455,8 @@ header.site-header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: var(--space-4);
-  margin-top: var(--space-8);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-8);
   align-items: start;
 }
 
@@ -719,15 +721,17 @@ footer.site-footer {
 @media (min-width: 768px) {
   .metrics {
     grid-template-columns: repeat(3, minmax(160px, 1fr));
-    max-width: 780px;
-    margin-top: var(--space-8);
+    max-width: 820px;
+    margin-top: var(--space-12);
+    margin-bottom: var(--space-10);
   }
 }
 
 @media (max-width: 767px) {
   .metrics {
     grid-template-columns: 1fr;
-    margin-top: var(--space-6);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
   }
 }
 
