@@ -95,7 +95,7 @@ function initMountainParallax() {
   const onScroll = () => {
     const sc = window.scrollY;
     layers.forEach((el, i) => {
-      const speed = (i + 1) * 0.15;
+      const speed = 0.12 + i * 0.05;
       el.style.setProperty("--offset", `${sc * speed}px`);
     });
   };
