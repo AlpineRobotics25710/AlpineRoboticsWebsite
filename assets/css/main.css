@@ -74,6 +74,16 @@ body[data-theme="dark"] {
   --btn-ghost-text: #f9fafb;
 }
 
+body[data-theme="light"] {
+  --color-bg-light: #f3f7f9;
+  --section-bg: #f3f7f9;
+  --card-bg: #ffffff;
+  --card-text: #0f2014;
+  --card-muted: #4a5b66;
+  --text-primary: #0f2014;
+  --text-secondary: #4a5b66;
+}
+
 *,
 *::before,
 *::after {
@@ -466,9 +476,9 @@ header.site-header {
   padding: var(--space-4);
   border: 1px solid rgba(15, 32, 20, 0.08);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   color: var(--text-primary);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
   min-width: 220px;
   min-height: 150px;
   width: 100%;
@@ -613,35 +623,39 @@ body[data-theme="dark"] .hero__badge {
 
 .hero + .section {
   margin-top: 0;
-  padding-top: var(--space-10);
+  padding-top: var(--space-12);
   z-index: 2;
 }
 
 .section__header {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: var(--space-4);
   margin-bottom: var(--space-6);
+  flex-wrap: wrap;
 }
 
 .section__title {
   font-family: var(--font-heading);
   font-size: clamp(1.75rem, 1vw + 1.5rem, 2.5rem);
   margin: 0;
-  color: #f7fff9;
+  color: var(--text-primary);
 }
 
 .section__description {
   max-width: 52ch;
-  color: var(--color-muted);
+  color: var(--text-secondary);
   margin: 0;
+  flex-basis: 100%;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-6);
+  align-items: stretch;
+  justify-items: center;
 }
 
 .card {
@@ -651,11 +665,12 @@ body[data-theme="dark"] .hero__badge {
   border-left: 3px solid rgba(34, 197, 94, 0.35);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   transition: transform var(--duration-base) var(--easing-smooth),
     border-color var(--duration-base) var(--easing-smooth),
     box-shadow var(--duration-base) var(--easing-smooth);
+  width: 100%;
 }
 
 body[data-theme="dark"] .card {
@@ -781,4 +796,7 @@ footer.site-footer {
   .hero__bg {
     background: #dff4ff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1900' height='520' viewBox='0 0 1900 520'><path d='M0 210 L150 170 L300 205 L450 150 L600 190 L760 140 L930 195 L1100 160 L1280 205 L1450 170 L1600 200 L1900 180 L1900 520 L0 520 Z' fill='%230f3324'/><path d='M0 240 L160 180 L300 215 L440 160 L620 210 L760 165 L940 220 L1100 175 L1280 215 L1420 185 L1600 215 L1900 195 L1900 520 L0 520 Z' fill='%2314532d'/><path d='M0 280 L150 230 L280 265 L420 215 L560 255 L720 210 L860 270 L1020 220 L1200 265 L1380 230 L1550 260 L1900 240 L1900 520 L0 520 Z' fill='%231a6a3c'/><path d='M0 360 L140 300 L300 350 L420 290 L580 340 L720 290 L880 350 L1040 300 L1220 350 L1380 300 L1540 350 L1700 305 L1900 330 L1900 520 L0 520 Z' fill='%2322c55e'/><g fill='%232edb74'><polygon points='80,358 110,268 150,360'/><polygon points='280,350 310,262 350,356'/><polygon points='520,356 560,266 600,358'/><polygon points='760,352 798,262 840,356'/><polygon points='980,348 1020,260 1060,352'/><polygon points='1200,356 1240,266 1280,360'/><polygon points='1420,350 1460,262 1500,356'/><polygon points='1660,356 1700,266 1740,360'/></g><g fill='%231a6a3c'><polygon points='30,364 70,280 110,362'/><polygon points='210,360 250,278 292,360'/><polygon points='410,366 450,280 490,362'/><polygon points='600,358 642,276 682,356'/><polygon points='790,366 832,278 872,364'/><polygon points='970,360 1012,276 1052,358'/><polygon points='1160,364 1202,276 1242,362'/><polygon points='1350,358 1392,276 1432,356'/><polygon points='1540,366 1582,278 1622,364'/><polygon points='1740,360 1782,276 1822,358'/></g><g fill='%235b3a1d'><rect x='122' y='360' width='10' height='54' rx='2'/><rect x='270' y='352' width='12' height='62' rx='2'/><rect x='450' y='356' width='10' height='60' rx='2'/><rect x='612' y='360' width='12' height='58' rx='2'/><rect x='792' y='352' width='10' height='62' rx='2'/><rect x='972' y='356' width='12' height='60' rx='2'/><rect x='1152' y='352' width='10' height='62' rx='2'/><rect x='1332' y='356' width='12' height='60' rx='2'/><rect x='1512' y='354' width='10' height='60' rx='2'/><rect x='1688' y='352' width='12' height='62' rx='2'/></g></svg>") bottom center / cover no-repeat;
   }
+}
+.card-grid > .card {
+  max-width: 320px;
 }
