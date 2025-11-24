@@ -223,7 +223,7 @@ header.site-header {
 
 .hero {
   position: relative;
-  padding: var(--space-10, 2.5rem) 0 var(--space-14, 3.5rem);
+  padding: var(--space-10, 2.5rem) 0 var(--space-16, 4rem);
   overflow: hidden;
   min-height: 68vh;
 }
@@ -414,7 +414,7 @@ header.site-header {
   align-items: center;
   gap: var(--space-4);
   margin-top: var(--space-6);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-7);
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -455,9 +455,10 @@ header.site-header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: var(--space-4);
-  margin-top: var(--space-10);
-  margin-bottom: var(--space-8);
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-12);
   align-items: start;
+  justify-items: center;
 }
 
 .metric {
@@ -467,17 +468,24 @@ header.site-header {
   background: rgba(255, 255, 255, 0.94);
   color: var(--text-primary);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  min-width: 220px;
+  min-height: 140px;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  gap: var(--space-2);
 }
 
 .metric__value {
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: var(--text-primary);
 }
 
 .metric__label {
   color: var(--text-secondary);
-  margin-top: var(--space-2);
+  margin-top: 0;
+  font-size: 1rem;
 }
 
 body[data-theme="dark"] .metric {
@@ -738,9 +746,9 @@ footer.site-footer {
 @media (min-width: 768px) {
   .metrics {
     grid-template-columns: repeat(3, minmax(160px, 1fr));
-    max-width: 820px;
+    max-width: 900px;
     margin-top: var(--space-12);
-    margin-bottom: var(--space-10);
+    margin-bottom: var(--space-12);
   }
 }
 
@@ -748,7 +756,7 @@ footer.site-footer {
   .metrics {
     grid-template-columns: 1fr;
     margin-top: var(--space-8);
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-10);
   }
 }
 
