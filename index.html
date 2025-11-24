@@ -50,12 +50,95 @@
     <main>
       <section class="hero">
         <div class="hero__bg">
-          <div class="hero__parallax">
-            <div class="mountain mountain--ridge" data-parallax-layer data-speed="0.08"></div>
-            <div class="mountain mountain--back" data-parallax-layer data-speed="0.16"></div>
-            <div class="mountain mountain--mid" data-parallax-layer data-speed="0.32"></div>
-            <div class="mountain mountain--front" data-parallax-layer data-speed="0.58"></div>
-          </div>
+          <svg class="hero__illustration forest-svg" viewBox="0 0 1600 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="foregroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="var(--foreground-start)" />
+                <stop offset="100%" stop-color="var(--foreground-end)" />
+              </linearGradient>
+            </defs>
+            <g id="mountains-back" data-parallax-layer data-speed="0.08">
+              <path d="M0 260 L220 210 L460 240 L720 200 L940 235 L1160 190 L1380 240 L1600 210 L1600 520 L0 520 Z" />
+            </g>
+            <g id="mountains-mid" data-parallax-layer data-speed="0.16">
+              <path d="M0 300 L200 250 L420 290 L620 250 L820 285 L1020 250 L1220 300 L1420 255 L1600 290 L1600 520 L0 520 Z" />
+            </g>
+            <g id="trees-back" data-parallax-layer data-speed="0.26">
+              <g class="tree" transform="translate(70 330) scale(1.05)">
+                <polygon class="tree__leaves" points="0,0 26,-90 52,0" />
+                <rect class="tree__trunk" x="22" y="0" width="8" height="30" rx="2" />
+              </g>
+              <g class="tree" transform="translate(220 340) scale(0.9)">
+                <polygon class="tree__leaves" points="0,0 26,-82 52,0" />
+                <rect class="tree__trunk" x="22" y="0" width="8" height="26" rx="2" />
+              </g>
+              <g class="tree" transform="translate(380 335) scale(1.1)">
+                <polygon class="tree__leaves" points="0,0 28,-96 56,0" />
+                <rect class="tree__trunk" x="24" y="0" width="8" height="30" rx="2" />
+              </g>
+              <g class="tree" transform="translate(560 345) scale(0.95)">
+                <polygon class="tree__leaves" points="0,0 24,-86 48,0" />
+                <rect class="tree__trunk" x="20" y="0" width="8" height="28" rx="2" />
+              </g>
+              <g class="tree" transform="translate(740 338) scale(1.08)">
+                <polygon class="tree__leaves" points="0,0 26,-94 52,0" />
+                <rect class="tree__trunk" x="22" y="0" width="8" height="30" rx="2" />
+              </g>
+              <g class="tree" transform="translate(920 342) scale(0.98)">
+                <polygon class="tree__leaves" points="0,0 26,-88 52,0" />
+                <rect class="tree__trunk" x="22" y="0" width="8" height="28" rx="2" />
+              </g>
+              <g class="tree" transform="translate(1080 336) scale(1.12)">
+                <polygon class="tree__leaves" points="0,0 28,-98 56,0" />
+                <rect class="tree__trunk" x="24" y="0" width="8" height="32" rx="2" />
+              </g>
+              <g class="tree" transform="translate(1260 344) scale(0.96)">
+                <polygon class="tree__leaves" points="0,0 24,-86 48,0" />
+                <rect class="tree__trunk" x="20" y="0" width="8" height="28" rx="2" />
+              </g>
+              <g class="tree" transform="translate(1440 338) scale(1.05)">
+                <polygon class="tree__leaves" points="0,0 26,-92 52,0" />
+                <rect class="tree__trunk" x="22" y="0" width="8" height="30" rx="2" />
+              </g>
+            </g>
+            <g id="trees-front" data-parallax-layer data-speed="0.42">
+              <g class="tree" transform="translate(110 360) scale(1.25)">
+                <polygon class="tree__leaves" points="0,0 30,-105 60,0" />
+                <rect class="tree__trunk" x="26" y="0" width="8" height="34" rx="2" />
+              </g>
+              <g class="tree" transform="translate(300 368) scale(1.12)">
+                <polygon class="tree__leaves" points="0,0 28,-98 56,0" />
+                <rect class="tree__trunk" x="24" y="0" width="8" height="32" rx="2" />
+              </g>
+              <g class="tree" transform="translate(500 364) scale(1.18)">
+                <polygon class="tree__leaves" points="0,0 30,-102 60,0" />
+                <rect class="tree__trunk" x="26" y="0" width="8" height="34" rx="2" />
+              </g>
+              <g class="tree" transform="translate(700 372) scale(1.08)">
+                <polygon class="tree__leaves" points="0,0 26,-94 52,0" />
+                <rect class="tree__trunk" x="22" y="0" width="8" height="30" rx="2" />
+              </g>
+              <g class="tree" transform="translate(900 368) scale(1.2)">
+                <polygon class="tree__leaves" points="0,0 30,-104 60,0" />
+                <rect class="tree__trunk" x="26" y="0" width="8" height="34" rx="2" />
+              </g>
+              <g class="tree" transform="translate(1100 370) scale(1.1)">
+                <polygon class="tree__leaves" points="0,0 28,-100 56,0" />
+                <rect class="tree__trunk" x="24" y="0" width="8" height="32" rx="2" />
+              </g>
+              <g class="tree" transform="translate(1300 366) scale(1.22)">
+                <polygon class="tree__leaves" points="0,0 30,-106 60,0" />
+                <rect class="tree__trunk" x="26" y="0" width="8" height="34" rx="2" />
+              </g>
+              <g class="tree" transform="translate(1500 372) scale(1.08)">
+                <polygon class="tree__leaves" points="0,0 26,-94 52,0" />
+                <rect class="tree__trunk" x="22" y="0" width="8" height="30" rx="2" />
+              </g>
+            </g>
+            <g id="foreground-gradient" data-parallax-layer data-speed="0.54">
+              <rect x="0" y="360" width="1600" height="200" fill="url(#foregroundGradient)" />
+            </g>
+          </svg>
           <div class="hero__grid"></div>
         </div>
         <div class="container hero__content">
