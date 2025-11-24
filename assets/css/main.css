@@ -236,8 +236,8 @@ header.site-header {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 80px;
-  background: linear-gradient(180deg, rgba(233, 244, 255, 0) 0%, rgba(233, 244, 255, 0.7) 70%, var(--color-bg-light) 100%);
+  height: 0;
+  background: transparent;
   pointer-events: none;
   z-index: 1;
 }
@@ -262,7 +262,11 @@ header.site-header {
   position: absolute;
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 78px;
+  line-height: 1;
   filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.12));
   transform: translateY(0);
   transition: transform 600ms var(--easing-smooth), opacity 400ms var(--easing-smooth);
@@ -271,32 +275,20 @@ header.site-header {
 
 .sun {
   position: relative;
-  background: radial-gradient(circle at 30% 30%, #fff6d5, #ffd86f);
   top: 10px;
   right: 0;
   opacity: 1;
-  box-shadow: 0 0 0 8px rgba(255, 216, 111, 0.2), 0 0 18px rgba(255, 216, 111, 0.35);
-}
-
-.sun::after {
-  content: "";
-  position: absolute;
-  inset: -16px;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, rgba(255, 216, 111, 0.45), transparent 40%, rgba(255, 216, 111, 0.5), transparent 70%, rgba(255, 216, 111, 0.35), transparent);
-  filter: blur(4px);
-  z-index: -1;
-  animation: sun-spin 18s linear infinite;
+  color: #ffc800;
+  text-shadow: 0 0 16px rgba(255, 200, 0, 0.35);
 }
 
 .moon {
   position: relative;
-  background: radial-gradient(circle at 40% 40%, #e7ecff 62%, #bfc7ff 75%, transparent 76%),
-    radial-gradient(circle at 55% 45%, transparent 58%, #0f151a 59%);
   top: -140px;
   right: 10px;
   opacity: 0;
-  box-shadow: 0 0 0 6px rgba(168, 185, 255, 0.15), 0 0 18px rgba(168, 185, 255, 0.3);
+  color: #c6d7ff;
+  text-shadow: 0 0 16px rgba(198, 215, 255, 0.35);
 }
 
 [data-theme="dark"] .sun {
@@ -553,7 +545,7 @@ body[data-theme="dark"] .hero__card {
 
 .hero + .section {
   margin-top: 0;
-  padding-top: var(--space-12);
+  padding-top: var(--space-10);
   z-index: 2;
 }
 
