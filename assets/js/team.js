@@ -3,15 +3,20 @@ import { team } from "../data/teamData.js";
 const fallbackImage = "../images/team/default.svg";
 
 const groups = [
-  { key: "captains", title: "Captains", targetId: "team-captains" },
-  { key: "leads", title: "Subsystem Leads", targetId: "team-leads" },
+  { key: "captainsLeads", title: "Captains & Leads", targetId: "team-captains" },
   { key: "members", title: "Members", targetId: "team-members" },
-  { key: "mentors", title: "Mentors", targetId: "team-mentors" }
+  { key: "mentors", title: "Coaches & Mentors", targetId: "team-mentors" }
 ];
 
 const allMembers = [];
+// Build derived collections so we can combine captains + leads without changing source data
+const derived = {
+  captainsLeads: [...(team.captains || []), ...(team.leads || [])],
+  members: team.members || [],
+  mentors: team.mentors || []
+};
 groups.forEach(({ key }) => {
-  (team[key] || []).forEach((m) => allMembers.push(m));
+  (derived[key] || []).forEach((m) => allMembers.push(m));
 });
 
 function resolveImage(src) {
@@ -37,7 +42,7 @@ function createCard(member, index) {
 function renderGroup({ key, title, targetId }) {
   const container = document.getElementById(targetId);
   if (!container) return;
-  const members = team[key] || [];
+  const members = derived[key] || [];
   if (!members.length) {
     container.innerHTML = "";
     return;
