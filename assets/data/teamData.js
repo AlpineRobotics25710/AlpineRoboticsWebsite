@@ -11,7 +11,7 @@ export const team = {
       links: { github: "https://github.com/example-arjun", linkedin: "https://linkedin.com/in/example-arjun" }
     },
     {
-      name: "Adi",
+      name: "Adi V",
       role: "Programming Team Co-Captain",
       image: "../images/team/adi.jpg",
       summary: "Auton routines, PedroPathing tuning, sensor integration.",
@@ -21,7 +21,7 @@ export const team = {
       links: { github: "https://github.com/adi-varshney", linkedin: "https://linkedin.com/in/adi-varshney09" }
     },
     {
-      name: "Prathyush",
+      name: "Prathyush Y",
       role: "Programming Team Co-Captain",
       image: "../images/team/prathyush.jpg",
       summary: "TeleOp controls, mechanism automation, and autonomous assists.",
@@ -64,7 +64,7 @@ export const team = {
       role: "Mechanical Design & Build",
       image: "../images/team/shishir.jpg",
       summary: "Auton testing, telemetry dashboards.",
-      bio: "Shishir is one of our newly onbaorded ",
+      bio: "Shishir is one of our newly onbaorded mechanical designers and ideators. He helps with auton testing as well, helping.",
       funfact: "tbd - Collects keyboard keycaps."
     },
     {
@@ -80,15 +80,15 @@ export const team = {
       role: "Rookie (programming & mechanical)",
       image: "../images/team/sanjana.jpg",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
-      bio: "Alex keeps the bot match-ready: pit checks, drivetrain upkeep, and between-match fixes.",
+      bio: "Sanjana joined this season to learn programming and mechanical skills. She helps with pit checks, drivetrain upkeep, and quick fixes.",
       funfact: "tbd - Knows every pit tool by weight."
     },
     {
-      name: "Saanvi",
+      name: "Saanvi A",
       role: "Rookie (mechanical design & build)",
       image: "../images/team/saanvi.jpg",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
-      bio: "Alex keeps the bot match-ready: pit checks, drivetrain upkeep, and between-match fixes.",
+      bio: "Saanvi joined this season to learn mechanical design and build. She helps with pit checks, drivetrain upkeep, and quick fixes.",
       funfact: "tbd - Knows every pit tool by weight."
     },
     {
@@ -96,7 +96,7 @@ export const team = {
       role: "Rookie (mechanical design & build)",
       image: "../images/team/sahasra.jpg",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
-      bio: "Alex keeps the bot match-ready: pit checks, drivetrain upkeep, and between-match fixes.",
+      bio: "Sahara joined this season to learn mechanical design and build. She helps with pit checks, drivetrain upkeep, and quick fixes.",
       funfact: "tbd - Knows every pit tool by weight."
     }
   ],
@@ -114,7 +114,15 @@ export const team = {
       role: "Coach",
       image: "../images/team/coach-ashish.jpg",
       summary: "Mechanical guidance, safety, season planning.",
-      bio: "Coach Ashish supports build strategy, safety, and season planning while mentoring students on documentation and iteration.",
+      bio: "Coach Ashish provides mechanical guidance, safety oversight, and season planning while mentoring students on design and build processes.",
+      funfact: "to be added"
+    },
+    {
+      name: "Ted Borer",
+      role: "Mentor",
+      image: "../images/team/ted-borer.jpg",
+      summary: "Mechanical guidance, ideation, and prototyping.",
+      bio: "Mr. Borer mentors students on mechanical design, ideation, and prototyping while sharing his engineering experience.",
       funfact: "to be added"
     }
   ]
