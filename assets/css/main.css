@@ -268,24 +268,40 @@ header.site-header {
   justify-content: center;
   cursor: pointer;
   transition: background var(--duration-fast) var(--easing-smooth), transform var(--duration-fast) var(--easing-smooth);
+  position: relative;
 }
 
 .nav__toggle-bar {
+  position: absolute;
+  left: 50%;
   width: 22px;
   height: 2px;
   background: var(--nav-text);
   border-radius: 999px;
-  transition: transform var(--duration-fast) var(--easing-smooth), opacity var(--duration-fast) var(--easing-smooth);
+  transform-origin: center;
+  transition:
+    transform var(--duration-fast) var(--easing-smooth),
+    opacity var(--duration-fast) var(--easing-smooth);
+}
+
+.nav__toggle-bar:nth-child(1) {
+  transform: translate(-50%, -8px);
+}
+.nav__toggle-bar:nth-child(2) {
+  transform: translate(-50%, 0);
+}
+.nav__toggle-bar:nth-child(3) {
+  transform: translate(-50%, 8px);
 }
 
 .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translate(-50%, 0) rotate(45deg);
 }
 .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) {
   opacity: 0;
 }
 .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translate(-50%, 0) rotate(-45deg);
 }
 
 .nav__toggle:focus-visible {
@@ -933,8 +949,11 @@ footer.site-footer {
     text-align: center;
   }
   .theme-toggle {
-    width: 100%;
+    width: auto;
     justify-content: center;
+    min-width: 64px;
+    padding: 8px 12px;
+    align-self: center;
   }
   .nav__toggle {
     display: inline-flex;
