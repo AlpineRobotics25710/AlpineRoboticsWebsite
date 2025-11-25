@@ -60,6 +60,14 @@ export const team = {
   ],
   members: [
     {
+      name: "Ashwin M",
+      role: "Experienced Programmer",
+      image: "../images/team/ashwin.jpg",
+      summary: "Helps with auton routines, aids in designing core programming features like waypointing, as well as PID/FF tuning.",
+      bio: "Ashwin is an experienced programmer who helps with auton routines, aids in designing core programming features like waypointing, as well as PID/FF tuning.",
+      funfact: "tbd - Knows every pit tool by weight."
+    },
+    {
       name: "Shishir M",
       role: "Mechanical Design & Build",
       image: "../images/team/shishir.jpg",
@@ -123,6 +131,14 @@ export const team = {
       image: "../images/team/ted-borer.jpg",
       summary: "Mechanical guidance, ideation, and prototyping.",
       bio: "Mr. Borer mentors students on mechanical design, ideation, and prototyping while sharing his engineering experience.",
+      funfact: "to be added"
+    },
+    {
+      name: "Anirudh A",
+      role: "Mentor",
+      image: "../images/team/anirudh.jpg",
+      summary: "Programming and mechanical insight and guidance.",
+      bio: "Anirudh mentors students on programming and mechanical design while sharing his experience from competitive robotics @ UPenn.",
       funfact: "to be added"
     }
   ]
