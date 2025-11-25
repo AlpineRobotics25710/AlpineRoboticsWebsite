@@ -72,8 +72,11 @@
                 <div class="metric__label">DECODE season focus</div>
               </div>
               <div class="metric">
-                <div class="metric__value">500+</div>
-                <div class="metric__label">Students to inspire</div>
+                <div class="metric__value">2 Years Active</div>
+                <div class="metric__label">
+                  Competing since 2024
+                  <span class="metric__caption">Seasons: INTO THE DEEP, DECODE</span>
+                </div>
               </div>
             </div>
           </div>
@@ -174,18 +177,6 @@
         </div>
       </section>
 
-      <section class="section years-active">
-        <div class="container">
-          <div class="years-active__card">
-            <div class="years-active__stat">
-              <p class="years-active__label">Active as an FTC Team</p>
-              <p class="years-active__value" data-start-year="2024">2 Years</p>
-            </div>
-            <p class="years-active__seasons">Seasons: INTO THE DEEP (2024–2025), DECODE (2025–2026)</p>
-          </div>
-        </div>
-      </section>
-
       <section class="section section--whats-next">
         <div class="container">
           <div class="section__header">
@@ -236,17 +227,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="./assets/js/main.js" type="module"></script>
-  <script>
-    (() => {
-      const el = document.querySelector(".years-active__value");
-      if (!el) return;
-      const startYear = parseInt(el.dataset.startYear || "2024", 10);
-      if (Number.isNaN(startYear)) return;
-      const now = new Date();
-      const years = Math.max(1, now.getFullYear() - startYear + 1);
-      el.textContent = `${years} Year${years === 1 ? "" : "s"}`;
-    })();
-  </script>
 </body>
 
 </html>
