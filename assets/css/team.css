@@ -164,7 +164,7 @@
   box-shadow:
     0 0 0 1px rgba(34, 197, 94, 0.12),
     0 24px 60px rgba(0, 0, 0, 0.45);
-  padding: var(--space-7);
+  padding: clamp(1.75rem, 1vw + 1.2rem, 2.5rem) clamp(2rem, 2vw + 1rem, 3rem);
   transform: translateY(8px) scale(0.96);
   transition: transform var(--duration-base) var(--easing-smooth), opacity var(--duration-base) var(--easing-smooth);
   color: var(--text-primary);
@@ -214,7 +214,7 @@
 
 .team-modal .modal__text {
   display: grid;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 
 .team-modal .modal__name {
@@ -234,11 +234,12 @@
 
 .team-modal .modal__body {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-3);
   color: var(--text-secondary);
   font-size: clamp(1rem, 0.35vw + 0.95rem, 1.05rem);
   line-height: 1.5;
   margin-top: var(--space-2);
+  max-width: 900px;
 }
 
 .team-modal .modal__meta {
@@ -246,6 +247,7 @@
   flex-wrap: wrap;
   gap: var(--space-3);
   align-items: center;
+  margin-top: var(--space-1);
 }
 
 .team-modal .modal__funfact {
@@ -256,7 +258,7 @@
 }
 
 .team-modal .modal__funfact::before {
-  content: "* ";
+  content: "★ ";
   color: var(--color-accent);
 }
 
@@ -270,9 +272,9 @@
   align-items: center;
   padding: var(--space-2) var(--space-3);
   border-radius: 999px;
-  border: 1px solid var(--color-border);
-  background: rgba(34, 197, 94, 0.12);
-  color: inherit;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.14);
+  color: var(--text-primary);
   font-weight: 600;
   transition: box-shadow var(--duration-fast) var(--easing-smooth), transform var(--duration-fast) var(--easing-smooth), background var(--duration-fast) var(--easing-smooth);
 }
