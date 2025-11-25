@@ -948,12 +948,12 @@ footer.site-footer {
     width: 100%;
     text-align: center;
   }
-  .theme-toggle {
+  .nav__menu .theme-toggle {
+    justify-self: center;
+    align-self: center;
     width: auto;
-    justify-content: center;
     min-width: 64px;
     padding: 8px 12px;
-    align-self: center;
   }
   .nav__toggle {
     display: inline-flex;
