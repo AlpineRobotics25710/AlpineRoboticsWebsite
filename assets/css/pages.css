@@ -107,13 +107,28 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid rgba(0, 180, 255, 0.35);
+  padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-md);
-  color: #b8ebff;
-  background: rgba(0, 180, 255, 0.08);
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.1px;
   margin-top: var(--space-3);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transition: transform var(--duration-fast) var(--easing-smooth), box-shadow var(--duration-fast) var(--easing-smooth);
+  border: 1px solid rgba(0, 113, 255, 0.4);
+  color: #0d2f5a;
+  background: rgba(0, 128, 255, 0.12);
+}
+
+.badge-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+body[data-theme="dark"] .badge-link {
+  border: 1px solid rgba(128, 204, 255, 0.5);
+  color: #b8ebff;
+  background: rgba(80, 160, 255, 0.16);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
 
 .team-grid {
