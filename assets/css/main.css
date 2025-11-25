@@ -1023,6 +1023,7 @@ body[data-theme="dark"] .mission-section::before {
   background: var(--section-bg-alt);
   padding-top: var(--space-16);
   padding-bottom: var(--space-16);
+  margin-top: 3rem;
 }
 
 .section--first-info .section__header {
@@ -1054,6 +1055,19 @@ body[data-theme="dark"] .mission-section::before {
   margin-bottom: 2.5rem;
 }
 
+.section--first-info {
+  text-align: center;
+}
+
+.section--first-info .first-desc {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  display: block;
+}
+
 .section--first-info .card-grid {
   margin-top: var(--space-6);
   gap: var(--space-6);
@@ -1069,6 +1083,36 @@ body[data-theme="dark"] .mission-section::before {
   border-radius: calc(var(--radius-lg) - 4px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
   background: linear-gradient(180deg, rgba(34, 197, 94, 0.06), rgba(0, 0, 0, 0)), var(--card-bg);
+}
+
+.about-intro-home {
+  padding: 5rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.about-intro-home h2,
+.about-intro-home h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-intro-home p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+[data-theme="light"] .about-intro-home p {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .about-intro-home p {
+  color: var(--text-primary-dark);
 }
 
 .card-grid {
