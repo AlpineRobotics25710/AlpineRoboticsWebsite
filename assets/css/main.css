@@ -409,16 +409,20 @@ header.site-header {
 
 .forest-svg .tree__shape {
   fill: var(--tree-front);
+  opacity: 0.9;
 }
 .forest-svg #trees-back .tree__shape,
 .forest-svg #trees-mid .tree__shape {
   fill: var(--tree-back);
+  opacity: 0.92;
 }
 .forest-svg #trees-front .tree__shape {
   fill: var(--tree-front);
+  opacity: 0.98;
 }
 .forest-svg .tree__shape--trunk {
   fill: var(--tree-trunk);
+  opacity: 0.9;
 }
 
 .forest-svg #foreground-gradient stop[offset="0%"] {
