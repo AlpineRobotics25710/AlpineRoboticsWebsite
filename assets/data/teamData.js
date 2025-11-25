@@ -63,7 +63,7 @@ export const team = {
       name: "Ashwin M",
       role: "Experienced Programmer",
       image: "../images/team/ashwin.jpg",
-      summary: "Helps with auton routines, aids in designing core programming features like waypointing, as well as PID/FF tuning.",
+      summary: "Aids in designing core programming features like waypointing, as well as PID/FF tuning.",
       bio: "Ashwin is an experienced programmer who helps with auton routines, aids in designing core programming features like waypointing, as well as PID/FF tuning.",
       funfact: "tbd - Knows every pit tool by weight."
     },
@@ -71,7 +71,7 @@ export const team = {
       name: "Shishir M",
       role: "Mechanical Design & Build",
       image: "../images/team/shishir.jpg",
-      summary: "Auton testing, telemetry dashboards.",
+      summary: "Auton testing, core mechanical design and prototyping, as well as telemetry dashboards.",
       bio: "Shishir is one of our newly onbaorded mechanical designers and ideators. He helps with auton testing as well, helping.",
       funfact: "tbd - Collects keyboard keycaps."
     },
@@ -79,8 +79,8 @@ export const team = {
       name: "Vihaan D",
       role: "Mechanical Design & Build",
       image: "../images/team/vihaan.jpg",
-      summary: "Pit checks, drivetrain upkeep, quick fixes.",
-      bio: "Vihaan keeps the bot match-ready: pit checks, drivetrain upkeep, and between-match fixes.",
+      summary: "Aids in mechanical designing, drivetrain upkeep, quick fixes.",
+      bio: "Vihaan keeps the bot match-ready: pit checks, drivetrain upkeep, and between-match fixes. You'll often find him playing geometry dash even when he's supposed to be working on the robot...",
       funfact: "Avid Geometry Dash player. Like really avid."
     },
     {
