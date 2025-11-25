@@ -488,6 +488,15 @@ header.site-header {
   .hero__actions .btn {
     width: min(100%, 320px);
   }
+  .hero::after {
+    height: 70px;
+  }
+  .hero-illustration {
+    height: 260px;
+  }
+  .hero-illustration svg {
+    height: 100%;
+  }
 }
 
 .btn {
