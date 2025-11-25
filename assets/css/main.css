@@ -197,6 +197,7 @@ header.site-header {
   color: #0f2014;
   cursor: pointer;
   font-size: 14px;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: background var(--duration-fast) var(--easing-smooth), transform var(--duration-fast) var(--easing-smooth);
 }

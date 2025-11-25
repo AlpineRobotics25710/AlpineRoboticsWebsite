@@ -20,25 +20,32 @@
 </head>
 <body data-theme="light">
   <div class="page">
-    <header class="site-header">
+        <header class="site-header">
       <div class="container nav">
         <a class="nav__brand" href="../index.html">
           <img src="../images/GreenAlpineLogo.png" alt="Alpine Robotics logo" width="52" height="52" decoding="async">
         </a>
-        <nav class="nav__links" aria-label="Primary">
-          <a class="nav__link" href="../index.html">Home</a>
-          <a class="nav__link" href="./about.html">About</a>
-          <a class="nav__link" href="./season.html">Current Season</a>
-          <a class="nav__link nav__link--active" href="./robots.html">Previous Robots</a>
-          <a class="nav__link" href="./team.html">Meet the Team</a>
-          <a class="nav__link" href="./gallery.html">Gallery</a>
-          <a class="nav__link" href="./sponsors.html">Sponsors</a>
-        </nav>
-        <button class="theme-toggle" type="button" aria-label="Toggle light or dark mode">
-          <span class="theme-toggle__sun" aria-hidden="true">☀️</span>
-          <span class="theme-toggle__moon" aria-hidden="true">🌙</span>
+        <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu" role="button" tabindex="0">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
         </button>
-        <a class="nav__cta" href="./season.html#join">Join Us</a>
+        <div class="nav__menu" id="nav-menu">
+          <nav class="nav__links" aria-label="Primary">
+            <a class="nav__link" href="../index.html">Home</a>
+            <a class="nav__link" href="./about.html">About</a>
+            <a class="nav__link" href="./season.html">Current Season</a>
+            <a class="nav__link nav__link--active" href="./robots.html">Previous Robots</a>
+            <a class="nav__link" href="./team.html">Meet the Team</a>
+            <a class="nav__link" href="./gallery.html">Gallery</a>
+            <a class="nav__link" href="./sponsors.html">Sponsors</a>
+          </nav>
+          <button class="theme-toggle" type="button" aria-label="Toggle light or dark mode">
+            <span class="theme-toggle__sun" aria-hidden="true">☀</span>
+            <span class="theme-toggle__moon" aria-hidden="true">🌙</span>
+          </button>
+          <a class="nav__cta" href="./season.html#join">Join Us</a>
+        </div>
       </div>
     </header>
 
@@ -122,5 +129,8 @@
   <script src="../assets/js/main.js" type="module"></script>
 </body>
 </html>
+
+
+
 
 
