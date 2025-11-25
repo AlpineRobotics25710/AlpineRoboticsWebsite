@@ -157,6 +157,12 @@ header.site-header {
   flex-wrap: nowrap;
 }
 
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
 .nav__brand {
   display: flex;
   align-items: center;
@@ -247,6 +253,44 @@ header.site-header {
 .nav__cta:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 16px 40px rgba(0, 180, 255, 0.3);
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 32, 20, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--easing-smooth), transform var(--duration-fast) var(--easing-smooth);
+}
+
+.nav__toggle-bar {
+  width: 22px;
+  height: 2px;
+  background: var(--nav-text);
+  border-radius: 999px;
+  transition: transform var(--duration-fast) var(--easing-smooth), opacity var(--duration-fast) var(--easing-smooth);
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav__toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -668,16 +712,16 @@ body[data-theme="dark"] .hero__badge {
 .mission-section .mission-tagline {
   display: block;
   margin-top: var(--space-3);
-  font-size: clamp(1.2rem, 0.95vw + 1rem, 1.52rem);
+  font-size: clamp(1.26rem, 1vw + 1.05rem, 1.62rem);
   font-style: italic;
-  background: linear-gradient(90deg, #0f3d2e 0%, #2ecc71 50%, #0f3d2e 100%);
+  background: linear-gradient(90deg, #0f5132 0%, #13c46b 50%, #0f5132 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
-  background-position: 0% center;
-  animation: mission-sweep-loop 7s linear infinite;
+  background-position: 200% center;
+  animation: missionSweep 5s linear infinite;
 }
 
 body[data-theme="dark"] .mission-section::before {
@@ -708,15 +752,12 @@ body[data-theme="dark"] .mission-section::before {
   animation: mission-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes mission-sweep-loop {
+@keyframes missionSweep {
   0% {
-    background-position: 0% center;
-  }
-  50% {
-    background-position: 100% center;
+    background-position: 200% center;
   }
   100% {
-    background-position: 0% center;
+    background-position: -200% center;
   }
 }
 
@@ -852,19 +893,66 @@ footer.site-footer {
 
 @media (max-width: 768px) {
   .nav {
-    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+  }
+  .nav__menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin-top: var(--space-2);
+    background: var(--card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+    padding: var(--space-5) var(--space-4);
+    display: grid;
+    gap: var(--space-4);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity var(--duration-base) var(--easing-smooth), transform var(--duration-base) var(--easing-smooth);
+  }
+  .nav__menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
   .nav__links {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    gap: var(--space-3);
+  }
+  .nav__link {
+    display: block;
+    text-align: center;
+    width: 100%;
   }
   .nav__cta {
     width: 100%;
     text-align: center;
   }
-
+  .theme-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+  .nav__toggle {
+    display: inline-flex;
+  }
   .hero {
     padding: 0;
+  }
+  .nav__menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 18px;
+    width: 14px;
+    height: 14px;
+    background: var(--card-bg);
+    transform: rotate(45deg);
+    border-top: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
   }
 }
 

@@ -146,6 +146,50 @@ function initThemeToggle() {
   });
 }
 
+function initNavToggle() {
+  const toggle = document.querySelector(".nav__toggle");
+  const menu = document.querySelector(".nav__menu");
+  if (!toggle || !menu) return;
+
+  const closeMenu = () => {
+    toggle.setAttribute("aria-expanded", "false");
+    menu.classList.remove("is-open");
+  };
+
+  const openMenu = () => {
+    toggle.setAttribute("aria-expanded", "true");
+    menu.classList.add("is-open");
+  };
+
+  const toggleMenu = () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    expanded ? closeMenu() : openMenu();
+  };
+
+  toggle.addEventListener("click", toggleMenu);
+  toggle.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    const target = e.target;
+    if (!(target instanceof Node)) return;
+    if (!menu.contains(target) && !toggle.contains(target)) {
+      closeMenu();
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initHeroAnimations();
   initParallax();
@@ -153,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMissionAnimation();
   initMountainParallax();
   initThemeToggle();
+  initNavToggle();
 });
 
 function initMissionAnimation() {
