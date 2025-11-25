@@ -624,7 +624,7 @@ body[data-theme="dark"] .hero__badge {
 }
 
 .mission-statement {
-  padding: var(--space-12) 0;
+  padding: calc(var(--space-12) + 0.5rem) 0;
   position: relative;
   overflow: hidden;
 }
@@ -653,8 +653,8 @@ body[data-theme="dark"] .hero__badge {
 
 .mission-statement__text {
   margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.08rem;
+  line-height: 1.75;
   color: var(--text-secondary);
 }
 
@@ -667,6 +667,31 @@ body[data-theme="dark"] .hero__badge {
 
 body[data-theme="dark"] .mission-statement::before {
   background: radial-gradient(circle at 50% 25%, rgba(34, 197, 94, 0.16), transparent 55%);
+}
+
+.mission-heading {
+  letter-spacing: 0;
+}
+
+.mission-tagline {
+  color: var(--color-accent);
+  font-style: italic;
+  background: linear-gradient(120deg, var(--color-accent) 0%, #22c55e 50%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  animation: mission-sweep 0.8s ease-out 0.1s forwards;
+}
+
+@keyframes mission-sweep {
+  from {
+    background-position: -100% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
 }
 
 .years-active {

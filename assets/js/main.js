@@ -85,6 +85,26 @@ function initScrollReveals() {
       }
     });
   });
+
+  const missionHeading = document.querySelector(".mission-heading");
+  if (missionHeading) {
+    gsap.fromTo(
+      missionHeading,
+      { opacity: 0, y: "10%", letterSpacing: "0px" },
+      {
+        opacity: 1,
+        y: "0%",
+        letterSpacing: "1.5px",
+        duration: 0.65,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: missionHeading,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      }
+    );
+  }
 }
 
 function initMountainParallax() {
