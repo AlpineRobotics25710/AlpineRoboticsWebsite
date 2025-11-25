@@ -66,9 +66,9 @@
   border-radius: var(--radius-lg);
   padding: var(--space-5);
   box-shadow: var(--team-card-shadow);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-3);
-  align-content: start;
   transition: transform var(--duration-fast) var(--easing-smooth), box-shadow var(--duration-fast) var(--easing-smooth);
 }
 
@@ -105,7 +105,7 @@
 }
 
 .team-card__actions {
-  margin-top: var(--space-2);
+  margin-top: auto;
 }
 
 .team-card__btn {

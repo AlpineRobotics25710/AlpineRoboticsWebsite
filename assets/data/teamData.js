@@ -17,9 +17,9 @@ export const team = {
       summary: "Auton routines, PedroPathing tuning, sensor integration.",
       bio: "Adi owns auton stability and path-planning. He integrates vision pipelines, sensor fusion, and PID/FF tuning for smooth cycles.",
       email: "adi.varshney09@gmail.com",
-      funfact: "Can debug spline math without coffee.",
+      funfact: "Love to code in my free time.",
       links: { github: "https://github.com/adi-varshney", linkedin: "https://linkedin.com/in/adi-varshney09" }
-    },
+    },  
     {
       name: "Prathyush Y",
       role: "Programming Team Co-Captain",
@@ -27,7 +27,7 @@ export const team = {
       summary: "TeleOp controls, mechanism automation, and autonomous assists.",
       bio: "Prathyush focuses on TeleOp command mapping and automated sequences. He pairs with build to keep code and mechanisms aligned.",
       email: "prathyush@example.com",
-      funfact: "Writes macros for everything : including snacks.",
+      funfact: "tbd - Writes macros for everything : including snacks.",
       links: { github: "https://github.com/example-prathyush" }
     }
   ],
@@ -63,7 +63,7 @@ export const team = {
       name: "Ashwin M",
       role: "Experienced Programmer",
       image: "../images/team/ashwin.jpg",
-      summary: "Aids in designing core programming features like waypointing, as well as PID/FF tuning.",
+      summary: "Aids in designing core programming features on the robot.",
       bio: "Ashwin is an experienced programmer who helps with auton routines, aids in designing core programming features like waypointing, as well as PID/FF tuning.",
       funfact: "tbd - Knows every pit tool by weight."
     },
@@ -71,9 +71,9 @@ export const team = {
       name: "Shishir M",
       role: "Mechanical Design & Build",
       image: "../images/team/shishir.jpg",
-      summary: "Auton testing, core mechanical design and prototyping, as well as telemetry dashboards.",
-      bio: "Shishir is one of our newly onbaorded mechanical designers and ideators. He helps with auton testing as well, helping.",
-      funfact: "tbd - Collects keyboard keycaps."
+      summary: "Aids with core mechanical design and prototyping.",
+      bio: "Shishir is one of our newly onboarded mechanical designers and ideators. He also works with programming sub-team to help connect hardware to code.",
+      funfact: "Likes to play minecraft in his free time."
     },
     {
       name: "Vihaan D",
@@ -85,7 +85,7 @@ export const team = {
     },
     {
       name: "Sanjana S",
-      role: "Rookie (programming & mechanical)",
+      role: "Rookie",
       image: "../images/team/sanjana.jpg",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
       bio: "Sanjana joined this season to learn programming and mechanical skills. She helps with pit checks, drivetrain upkeep, and quick fixes.",
@@ -93,7 +93,7 @@ export const team = {
     },
     {
       name: "Saanvi A",
-      role: "Rookie (mechanical design & build)",
+      role: "Rookie",
       image: "../images/team/saanvi.jpg",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
       bio: "Saanvi joined this season to learn mechanical design and build. She helps with pit checks, drivetrain upkeep, and quick fixes.",
@@ -101,7 +101,7 @@ export const team = {
     },
     {
       name: "Sahasra",
-      role: "Rookie (mechanical design & build)",
+      role: "Rookie",
       image: "../images/team/sahasra.jpg",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
       bio: "Sahara joined this season to learn mechanical design and build. She helps with pit checks, drivetrain upkeep, and quick fixes.",
