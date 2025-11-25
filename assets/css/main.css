@@ -407,15 +407,16 @@ header.site-header {
   fill: var(--hill);
 }
 
+.forest-svg .tree__shape {
+  fill: var(--tree-front);
+}
 .forest-svg #trees-back .tree__shape,
 .forest-svg #trees-mid .tree__shape {
   fill: var(--tree-back);
 }
-
 .forest-svg #trees-front .tree__shape {
   fill: var(--tree-front);
 }
-
 .forest-svg .tree__shape--trunk {
   fill: var(--tree-trunk);
 }
