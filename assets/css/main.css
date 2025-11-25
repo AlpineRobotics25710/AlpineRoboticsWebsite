@@ -473,6 +473,23 @@ header.site-header {
   justify-content: center;
 }
 
+@media (max-width: 640px) {
+  .hero-content {
+    padding-top: 110px;
+    padding-bottom: 90px;
+  }
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+  .hero__actions .btn {
+    width: min(100%, 320px);
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
