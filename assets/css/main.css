@@ -309,6 +309,15 @@ header.site-header {
   outline-offset: 3px;
 }
 
+[data-theme="dark"] .nav__toggle {
+  background: rgba(17, 24, 31, 0.92);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+[data-theme="dark"] .nav__toggle-bar {
+  background: #e6f2e7;
+}
+
 .hero {
   position: relative;
   width: 100%;
