@@ -150,6 +150,51 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroAnimations();
   initParallax();
   initScrollReveals();
+  initMissionAnimation();
   initMountainParallax();
   initThemeToggle();
 });
+
+function initMissionAnimation() {
+  if (prefersReducedMotion || typeof gsap === "undefined") return;
+  if (typeof ScrollTrigger === "undefined" || !gsap.registerPlugin) return;
+  gsap.registerPlugin(ScrollTrigger);
+
+  const title = document.querySelector(".mission-section .mission-title");
+  if (title) {
+    gsap.fromTo(
+      title,
+      { opacity: 0, y: 20, letterSpacing: "0px" },
+      {
+        opacity: 1,
+        y: 0,
+        letterSpacing: "1.5px",
+        duration: 0.7,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      }
+    );
+  }
+
+  const tagline = document.querySelector(".mission-section .mission-tagline");
+  if (tagline) {
+    gsap.fromTo(
+      tagline,
+      { backgroundPosition: "-150% 50%" },
+      {
+        backgroundPosition: "100% 50%",
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: tagline,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      }
+    );
+  }
+}

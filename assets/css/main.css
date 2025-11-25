@@ -623,13 +623,13 @@ body[data-theme="dark"] .hero__badge {
   margin: 0;
 }
 
-.mission-statement {
-  padding: calc(var(--space-12) + 0.5rem) 0;
+.mission-section {
+  padding: calc(var(--space-12) + 1rem) 0;
   position: relative;
   overflow: hidden;
 }
 
-.mission-statement::before {
+.mission-section::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -638,7 +638,7 @@ body[data-theme="dark"] .hero__badge {
   opacity: 0.7;
 }
 
-.mission-statement .container {
+.mission-section .container {
   position: relative;
   z-index: 1;
 }
@@ -651,21 +651,33 @@ body[data-theme="dark"] .hero__badge {
   gap: var(--space-4);
 }
 
-.mission-statement__text {
+.mission-section .mission-title {
+  font-size: clamp(2.5rem, 2.5vw + 1.5rem, 3.6rem);
+  letter-spacing: 0;
+}
+
+.mission-section .mission-text {
   margin: 0;
-  font-size: 1.08rem;
-  line-height: 1.75;
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem);
+  line-height: 1.85;
   color: var(--text-secondary);
 }
 
-.mission-statement__accent {
+.mission-section .mission-tagline {
   display: block;
   margin-top: var(--space-3);
+  font-size: clamp(1.25rem, 1vw + 1.05rem, 1.6rem);
   color: var(--color-accent);
   font-style: italic;
+  background: linear-gradient(120deg, var(--color-accent) 0%, #22c55e 50%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  background-position: -100% 50%;
 }
 
-body[data-theme="dark"] .mission-statement::before {
+body[data-theme="dark"] .mission-section::before {
   background: radial-gradient(circle at 50% 25%, rgba(34, 197, 94, 0.16), transparent 55%);
 }
 
