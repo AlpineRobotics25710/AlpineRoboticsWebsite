@@ -15,7 +15,7 @@
 
 .gallery-sidebar {
   position: sticky;
-  top: 120px;
+  top: 140px;
   align-self: start;
   width: var(--sidebar-width);
   min-width: var(--sidebar-width);
