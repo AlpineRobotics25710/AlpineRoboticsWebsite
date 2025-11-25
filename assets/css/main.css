@@ -652,29 +652,32 @@ body[data-theme="dark"] .hero__badge {
 }
 
 .mission-section .mission-title {
-  font-size: clamp(2.5rem, 2.5vw + 1.5rem, 3.6rem);
+  font-size: clamp(2.35rem, 2.35vw + 1.45rem, 3.4rem);
   letter-spacing: 0;
+  opacity: 0;
+  transform: translateY(22px);
 }
 
 .mission-section .mission-text {
   margin: 0;
-  font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem);
-  line-height: 1.85;
+  font-size: clamp(1.18rem, 0.95vw + 0.95rem, 1.42rem);
+  line-height: 1.8;
   color: var(--text-secondary);
 }
 
 .mission-section .mission-tagline {
   display: block;
   margin-top: var(--space-3);
-  font-size: clamp(1.25rem, 1vw + 1.05rem, 1.6rem);
-  color: var(--color-accent);
+  font-size: clamp(1.2rem, 0.95vw + 1rem, 1.52rem);
   font-style: italic;
-  background: linear-gradient(120deg, var(--color-accent) 0%, #22c55e 50%, var(--color-accent) 100%);
+  background: linear-gradient(90deg, #0f3d2e 0%, #2ecc71 50%, #0f3d2e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-size: 200% 100%;
-  background-position: -100% 50%;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  background-position: 0% center;
+  animation: mission-sweep-loop 7s linear infinite;
 }
 
 body[data-theme="dark"] .mission-section::before {
@@ -686,6 +689,41 @@ body[data-theme="dark"] .mission-section::before {
   margin-top: 2px;
   font-size: 0.95rem;
   color: var(--text-secondary);
+}
+
+@keyframes mission-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    letter-spacing: 0px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 1.5px;
+  }
+}
+
+.mission-title.animate-in {
+  animation: mission-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes mission-sweep-loop {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-section .mission-tagline {
+    animation: none;
+  }
 }
 
 .mission-heading {
