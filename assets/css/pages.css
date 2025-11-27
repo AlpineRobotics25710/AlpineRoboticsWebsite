@@ -265,6 +265,9 @@ body[data-theme="dark"] .badge-link {
 
 .center {
   text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
 }
 
 /* Dark theme overrides */
