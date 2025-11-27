@@ -163,6 +163,101 @@
   }
 }
 
+/* OpenVault page layout */
+.ov-hero__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.ov-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.ov-hero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.ov-hero__card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--card-bg);
+  box-shadow: var(--color-shadow);
+  max-width: 480px;
+}
+
+.ov-hero__card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Reuse metrics but tighten spacing on this page */
+.openvault-metrics {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+}
+
+/* Impact section layout */
+.ov-impact {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: flex-start;
+}
+
+.ov-impact__card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--card-bg);
+  box-shadow: var(--color-shadow);
+  padding: var(--space-4);
+}
+
+.ov-impact__card img {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-lg) - 4px);
+}
+
+.ov-impact__caption {
+  margin-top: var(--space-3);
+  font-size: 0.9rem;
+  color: var(--text-secondary, var(--color-muted));
+}
+
+/* CTA buttons layout */
+.ov-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ov-hero__layout,
+  .ov-impact {
+    grid-template-columns: 1fr;
+  }
+
+  .ov-hero__visual,
+  .ov-impact__visual {
+    order: -1;
+  }
+
+  .openvault-metrics {
+    margin-top: var(--space-4);
+  }
+}
+
 .tile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
