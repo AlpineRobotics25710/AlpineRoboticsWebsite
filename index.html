@@ -130,10 +130,17 @@
                 <path class="tree__shape--trunk" d="M30 76 h10 v40 a2 2 0 0 1-10 0z" />
               </symbol>
             </defs>
+
             <g class="parallax-layer layer0" id="mountains-far">
-              <path fill="var(--mountain-far)"
-                d="M0 320 L200 270 L420 300 L650 275 L920 305 L1180 280 L1400 310 L1600 290 L1600 520 L0 520 Z" />
+              <!-- Main 3-peak Alpine ridge -->
+              <path class="mountain-main"
+                d="M0 300 L280 210 L460 260 L800 90 L1120 260 L1350 200 L1520 280 L1600 320 L1600 520 L0 520 Z " />
+
+              <!-- Simple two-tone shadow on the right-hand faces -->
+              <path class="mountain-shade"
+                d="M800 90 L920 180 L1120 260 L1350 200 L1520 280 L1600 320 L1600 520 L700 520 Z" />
             </g>
+
             <g class="parallax-layer layer1" id="mountains-back">
               <path fill="var(--mountain-back)"
                 d="M0 360 L240 320 L520 340 L780 322 L1040 342 L1300 328 L1600 340 L1600 520 L0 520 Z" />

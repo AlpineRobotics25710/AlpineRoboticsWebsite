@@ -560,9 +560,16 @@ header.site-header {
   fill: var(--mountain-mid);
 }
 
-.forest-svg #mountains-far path {
+/* Far mountains – main ridge uses the token color */
+.forest-svg #mountains-far .mountain-main {
   fill: var(--mountain-far);
 }
+
+/* Simple two-tone shading overlay on right-hand faces */
+.forest-svg #mountains-far .mountain-shade {
+  fill: rgba(0, 0, 0, 0.22); /* subtle darkening, still green underneath */
+}
+
 
 .forest-svg #hill path,
 .forest-svg #mountains-near path {
