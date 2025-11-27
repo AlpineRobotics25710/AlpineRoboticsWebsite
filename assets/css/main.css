@@ -30,15 +30,15 @@
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
   --max-width: 1200px;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
+  --space-2: 0.35rem;
+  --space-3: 0.525rem;
+  --space-4: 0.7rem;
+  --space-5: 0.875rem;
+  --space-6: 1.05rem;
+  --space-8: 1.4rem;
+  --space-10: 1.75rem;
+  --space-12: 2.1rem;
+  --space-16: 2.8rem;
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -163,6 +163,7 @@ header.site-header {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  flex: 1;
 }
 
 .nav__brand {
@@ -180,15 +181,30 @@ header.site-header {
 }
 
 .nav__links {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-4);
   flex-wrap: nowrap;
   white-space: nowrap;
   background: transparent;
   border: none;
   padding: 0;
   box-shadow: none;
+}
+
+.nav__center {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  margin: 0 auto;
+}
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+  margin-left: var(--space-4);
 }
 
 .theme-toggle {
@@ -220,6 +236,8 @@ header.site-header {
 
 .theme-toggle__sun,
 .theme-toggle__moon {
+  display: inline-block;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
   font-size: 18px;
   line-height: 1;
 }
@@ -841,7 +859,7 @@ body[data-theme="dark"] .hero__badge {
 }
 
 .section {
-  padding: var(--space-12) 0;
+  padding: clamp(2.5rem, 6vh, 4.5rem) 0;
   position: relative;
   overflow: hidden;
   background: var(--section-bg);
@@ -859,32 +877,32 @@ body[data-theme="dark"] .hero__badge {
 }
 
 .hero + .section {
-  margin-top: -40px;
-  padding-top: calc(var(--space-12) + 40px);
+  margin-top: -28px;
+  padding-top: calc(clamp(2.5rem, 6vh, 4.5rem) + 28px);
   z-index: 2;
 }
 
 .section__header {
   display: grid;
-  gap: 0.9rem;
-  margin-bottom: var(--space-5);
+  gap: 0.65rem;
+  margin-bottom: var(--space-4);
 }
 
 .section__title {
   font-family: var(--font-heading);
   font-size: clamp(1.85rem, 1vw + 1.6rem, 2.6rem);
-  margin: 0;
+  margin: 0 0 0.25rem;
   color: var(--text-primary);
 }
 
 .section__description {
   max-width: 58ch;
   color: var(--text-secondary);
-  margin: 0;
+  margin: 0.25rem 0 0.9rem;
 }
 
 .mission-section {
-  padding: calc(var(--space-12) + 1rem) 0;
+  padding: calc(clamp(2.5rem, 6vh, 4.5rem) + 0.5rem) 0;
   position: relative;
   overflow: hidden;
 }
@@ -908,7 +926,7 @@ body[data-theme="dark"] .hero__badge {
   margin: 0 auto;
   text-align: center;
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .mission-section .mission-title {
@@ -916,6 +934,7 @@ body[data-theme="dark"] .hero__badge {
   letter-spacing: 0;
   opacity: 0;
   transform: translateY(22px);
+  margin-bottom: 0.2em;
 }
 
 .mission-section .mission-text {
@@ -923,6 +942,33 @@ body[data-theme="dark"] .hero__badge {
   font-size: clamp(1.18rem, 0.95vw + 0.95rem, 1.42rem);
   line-height: 1.8;
   color: var(--text-secondary);
+}
+
+.mission-subtitle,
+.section-subtitle {
+  margin-top: 0.05em;
+  margin-bottom: 1.3em;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  opacity: 0.9;
+  text-align: center;
+}
+
+.mission-subtitle {
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .mission-subtitle,
+  .section-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 1.3rem;
+  }
+}
+
+[data-theme="dark"] .mission-subtitle,
+[data-theme="dark"] .section-subtitle {
+  color: var(--text-secondary-dark);
 }
 
 .mission-section .mission-tagline {
@@ -1159,11 +1205,11 @@ body[data-theme="dark"] .card__text {
 .card__title {
   font-family: var(--font-heading);
   font-size: 1.3rem;
-  margin: 0 0 var(--space-3);
+  margin: 0 0 0.5rem;
 }
 
 .card__text {
-  margin: 0;
+  margin: 0.35rem 0 0;
   color: var(--color-muted);
   line-height: 1.6;
 }
@@ -1231,6 +1277,10 @@ footer.site-footer {
     transform: translateY(0);
     pointer-events: auto;
   }
+  .nav__center {
+    width: 100%;
+    justify-content: flex-start;
+  }
   .nav__links {
     display: grid;
     gap: var(--space-3);
@@ -1239,6 +1289,11 @@ footer.site-footer {
     display: block;
     text-align: center;
     width: 100%;
+  }
+  .nav__right {
+    display: grid;
+    gap: var(--space-3);
+    justify-items: center;
   }
   .nav__cta {
     width: 100%;

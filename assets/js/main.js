@@ -132,7 +132,7 @@ function applyTheme(theme) {
 function initThemeToggle() {
   const toggle = document.querySelector(".theme-toggle");
   const stored = localStorage.getItem(storageKey);
-  const initial = stored === "dark" ? "dark" : "light";
+  const initial = stored === "dark" || stored === "light" ? stored : "dark";
   applyTheme(initial);
   if (!toggle) return;
   toggle.setAttribute("aria-pressed", String(initial === "dark"));

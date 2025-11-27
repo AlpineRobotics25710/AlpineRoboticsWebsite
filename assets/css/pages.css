@@ -1,22 +1,22 @@
 .page-heading {
-  padding: var(--space-12) 0 var(--space-8);
+  padding: var(--space-10) 0 var(--space-6);
   background: var(--section-bg);
   border-bottom: 1px solid var(--color-border, rgba(15, 32, 20, 0.1));
 }
 
 .page-heading .pill {
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .page-heading__title {
   font-family: var(--font-heading, "Space Grotesk", sans-serif);
   font-size: clamp(2rem, 2vw + 1.5rem, 3rem);
-  margin: 0 0 var(--space-3);
+  margin: 0 0 0.6rem;
   color: var(--text-primary, #0f2014);
 }
 
 .page-heading__lead {
-  margin: 0;
+  margin: 0.35rem 0 0.75rem;
   max-width: 60ch;
   color: var(--text-secondary, #4a5b66);
   line-height: 1.6;
@@ -24,7 +24,7 @@
 
 @media (max-width: 640px) {
   .page-heading {
-    padding: var(--space-10) 0 var(--space-6);
+    padding: var(--space-8) 0 var(--space-5);
   }
 }
 
@@ -52,26 +52,26 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: var(--space-10);
+  padding: var(--space-8);
 }
 
 .stack {
   display: grid;
-  gap: var(--space-4);
+  gap: calc(var(--space-4) * 0.85);
 }
 
 .list-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-4);
-  margin-top: var(--space-4);
+  gap: calc(var(--space-4) * 0.9);
+  margin-top: var(--space-3);
 }
 
 .timeline {
   border-left: 2px solid var(--color-border);
-  padding-left: var(--space-5);
+  padding-left: var(--space-4);
   display: grid;
-  gap: var(--space-6);
+  gap: var(--space-4);
 }
 
 .timeline__item {
@@ -93,7 +93,7 @@
 .tile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-6);
+  gap: var(--space-5);
 }
 
 .spec-list {
@@ -111,7 +111,7 @@
   border-radius: var(--radius-md);
   font-weight: 800;
   letter-spacing: 0.1px;
-  margin-top: var(--space-3);
+  margin-top: var(--space-2);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
   transition: transform var(--duration-fast) var(--easing-smooth), box-shadow var(--duration-fast) var(--easing-smooth);
   border: 1px solid rgba(0, 113, 255, 0.4);
