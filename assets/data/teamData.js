@@ -17,7 +17,7 @@ export const team = {
       summary: "Auton routines, PedroPathing tuning, sensor integration.",
       bio: "Adi owns auton stability and path-planning. He integrates vision pipelines, sensor fusion, and PID/FF tuning for smooth cycles.",
       email: "adi.varshney09@gmail.com",
-      funfact: "I actually made this website LOL :)",
+      funfact: "I made this website :)",
       links: { github: "https://github.com/adi-varshney", linkedin: "https://linkedin.com/in/adi-varshney09" }
     },  
     {
