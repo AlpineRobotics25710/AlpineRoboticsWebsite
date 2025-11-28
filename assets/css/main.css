@@ -147,7 +147,8 @@ header.site-header {
   background: var(--nav-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
-  transition: background var(--duration-base) var(--easing-smooth), border-color var(--duration-base) var(--easing-smooth);
+  transition: background var(--duration-base) var(--easing-smooth),
+    border-color var(--duration-base) var(--easing-smooth);
 }
 
 .nav {
@@ -212,16 +213,20 @@ header.site-header {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 8px 12px; min-height: 36px; min-width: 68px;
+  padding: 8px 12px;
+  min-height: 36px;
+  min-width: 68px;
   border-radius: 999px;
   border: 1px solid rgba(15, 32, 20, 0.12);
   background: rgba(255, 255, 255, 0.9);
   color: #0f2014;
   cursor: pointer;
   font-size: 14px;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji",
+    sans-serif;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: background var(--duration-fast) var(--easing-smooth), transform var(--duration-fast) var(--easing-smooth);
+  transition: background var(--duration-fast) var(--easing-smooth),
+    transform var(--duration-fast) var(--easing-smooth);
 }
 
 .theme-toggle:hover {
@@ -237,7 +242,8 @@ header.site-header {
 .theme-toggle__sun,
 .theme-toggle__moon {
   display: inline-block;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji",
+    sans-serif;
   font-size: 18px;
   line-height: 1;
 }
@@ -404,7 +410,10 @@ header.site-header {
 
 .nav__cta {
   padding: var(--space-3) var(--space-4);
-  background: linear-gradient(120deg, #0a8a4c, #0ec874); color: #ffffff; box-shadow: 0 12px 32px rgba(14, 107, 63, 0.22); border: 1px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(120deg, #0a8a4c, #0ec874);
+  color: #ffffff;
+  box-shadow: 0 12px 32px rgba(14, 107, 63, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--radius-md);
   color: #0a0f0a;
   font-weight: 800;
@@ -430,7 +439,8 @@ header.site-header {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background var(--duration-fast) var(--easing-smooth), transform var(--duration-fast) var(--easing-smooth);
+  transition: background var(--duration-fast) var(--easing-smooth),
+    transform var(--duration-fast) var(--easing-smooth);
   position: relative;
 }
 
@@ -442,8 +452,7 @@ header.site-header {
   background: var(--nav-text);
   border-radius: 999px;
   transform-origin: center;
-  transition:
-    transform var(--duration-fast) var(--easing-smooth),
+  transition: transform var(--duration-fast) var(--easing-smooth),
     opacity var(--duration-fast) var(--easing-smooth);
 }
 
@@ -495,7 +504,12 @@ header.site-header {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, var(--hero-sky-start) 0%, var(--hero-sky-mid) 40%, var(--hero-sky-end) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--hero-sky-start) 0%,
+    var(--hero-sky-mid) 40%,
+    var(--hero-sky-end) 100%
+  );
   transition: background var(--duration-base) var(--easing-smooth);
 }
 
@@ -506,13 +520,21 @@ header.site-header {
   right: 0;
   bottom: 0;
   height: 120px;
-  background: linear-gradient(180deg, rgba(247, 251, 255, 0) 0%, var(--section-bg) 80%);
+  background: linear-gradient(
+    180deg,
+    rgba(247, 251, 255, 0) 0%,
+    var(--section-bg) 80%
+  );
   pointer-events: none;
   z-index: 2;
 }
 
 [data-theme="dark"] .hero::after {
-  background: linear-gradient(180deg, rgba(3, 6, 11, 0) 0%, var(--section-bg) 80%);
+  background: linear-gradient(
+    180deg,
+    rgba(3, 6, 11, 0) 0%,
+    var(--section-bg) 80%
+  );
 }
 
 .hero-illustration {
@@ -549,7 +571,12 @@ header.site-header {
 }
 
 [data-theme="dark"] .hero__bg {
-  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.04), transparent 45%), linear-gradient(180deg, #0a1221 0%, #0c1527 40%, #0a1221 100%);
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.04),
+      transparent 45%
+    ),
+    linear-gradient(180deg, #0a1221 0%, #0c1527 40%, #0a1221 100%);
 }
 
 .forest-svg #mountains-back path {
@@ -569,7 +596,6 @@ header.site-header {
 .forest-svg #mountains-far .mountain-shade {
   fill: rgba(0, 0, 0, 0.22); /* subtle darkening, still green underneath */
 }
-
 
 .forest-svg #hill path,
 .forest-svg #mountains-near path {
@@ -877,7 +903,11 @@ body[data-theme="dark"] .hero__badge {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.08), transparent 45%),
+  background: radial-gradient(
+      circle at 20% 10%,
+      rgba(34, 197, 94, 0.08),
+      transparent 45%
+    ),
     radial-gradient(circle at 80% 20%, rgba(0, 180, 255, 0.06), transparent 45%);
   pointer-events: none;
   opacity: 0.35;
@@ -918,7 +948,11 @@ body[data-theme="dark"] .hero__badge {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 25%, rgba(34, 197, 94, 0.12), transparent 55%);
+  background: radial-gradient(
+    circle at 50% 25%,
+    rgba(34, 197, 94, 0.12),
+    transparent 55%
+  );
   pointer-events: none;
   opacity: 0.7;
 }
@@ -994,7 +1028,11 @@ body[data-theme="dark"] .hero__badge {
 }
 
 body[data-theme="dark"] .mission-section::before {
-  background: radial-gradient(circle at 50% 25%, rgba(34, 197, 94, 0.16), transparent 55%);
+  background: radial-gradient(
+    circle at 50% 25%,
+    rgba(34, 197, 94, 0.16),
+    transparent 55%
+  );
 }
 
 .metric__caption {
@@ -1043,7 +1081,12 @@ body[data-theme="dark"] .mission-section::before {
 .mission-tagline {
   color: var(--color-accent);
   font-style: italic;
-  background: linear-gradient(120deg, var(--color-accent) 0%, #22c55e 50%, var(--color-accent) 100%);
+  background: linear-gradient(
+    120deg,
+    var(--color-accent) 0%,
+    #22c55e 50%,
+    var(--color-accent) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1060,8 +1103,6 @@ body[data-theme="dark"] .mission-section::before {
     background-position: 100% 50%;
   }
 }
-
-
 
 .section--whats-next .section__header {
   margin-bottom: var(--space-4);
@@ -1096,7 +1137,11 @@ body[data-theme="dark"] .mission-section::before {
   display: block;
   width: 120px;
   height: 3px;
-  background: linear-gradient(90deg, rgba(34, 197, 94, 0.5), rgba(0, 180, 255, 0.4));
+  background: linear-gradient(
+    90deg,
+    rgba(34, 197, 94, 0.5),
+    rgba(0, 180, 255, 0.4)
+  );
   margin: var(--space-2) auto 0;
   border-radius: 999px;
 }
@@ -1135,7 +1180,8 @@ body[data-theme="dark"] .mission-section::before {
   padding: var(--space-6);
   border-radius: calc(var(--radius-lg) - 4px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
-  background: linear-gradient(180deg, rgba(34, 197, 94, 0.06), rgba(0, 0, 0, 0)), var(--card-bg);
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.06), rgba(0, 0, 0, 0)),
+    var(--card-bg);
 }
 
 .about-intro-home {
@@ -1277,7 +1323,8 @@ footer.site-footer {
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
-    transition: opacity var(--duration-base) var(--easing-smooth), transform var(--duration-base) var(--easing-smooth);
+    transition: opacity var(--duration-base) var(--easing-smooth),
+      transform var(--duration-base) var(--easing-smooth);
   }
   .nav__menu.is-open {
     opacity: 1;
@@ -1360,7 +1407,6 @@ footer.site-footer {
   max-width: 320px;
 }
 
-
 [data-theme="light"] .nav__link--active {
   background: rgba(34, 197, 94, 0.18) !important;
   color: #0f1812 !important;
@@ -1376,3 +1422,66 @@ footer.site-footer {
   background: rgba(34, 197, 94, 0.14);
   color: #0f1812 !important;
 }
+
+/* --- "What's next" cards: link + layout --- */
+
+.whats-next-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.whats-next-card .card__text {
+  flex: 1;
+}
+
+/* Green link inside each card */
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.card__link::after {
+  content: "→";
+  font-size: 0.95em;
+  transform: translateY(1px);
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+/* --- Layout overrides: "What's next" section only (flexbox) --- */
+
+.section--whats-next .card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;           /* center each row */
+  gap: var(--space-6);
+  max-width: 1120px;
+  margin: 0 auto;                    /* center the whole block in the section */
+}
+
+/* Card sizing: 3 per row on large screens, 2 or 1 as space allows */
+.section--whats-next .card-grid .card {
+  flex: 1 1 300px;                   /* target ~300px width */
+  max-width: 360px;
+}
+
+/* Mobile: single column, full width */
+@media (max-width: 768px) {
+  .section--whats-next .card-grid {
+    justify-content: center;
+  }
+
+  .section--whats-next .card-grid .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
