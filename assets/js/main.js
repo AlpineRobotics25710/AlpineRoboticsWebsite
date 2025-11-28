@@ -10,7 +10,7 @@ function initHeroAnimations() {
     .from(".hero__title", { y: 20, opacity: 0 }, "-=0.4")
     .from(".hero__subtitle", { y: 20, opacity: 0 }, "-=0.5")
     .from(".hero__actions .btn", { y: 16, opacity: 0, stagger: 0.08 }, "-=0.4")
-    .from(".metrics .metric", { y: 20, opacity: 0, stagger: 0.08 }, "-=0.2");
+    .from(".hero .metrics .metric", { y: 20, opacity: 0, stagger: 0.08 }, "-=0.2");
 
   gsap.from(".hero__card", {
     scale: 0.96,
@@ -192,6 +192,7 @@ function initNavToggle() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeroAnimations();
+  initOpenVaultMetrics();
   initParallax();
   initScrollReveals();
   initMissionAnimation();
@@ -222,4 +223,25 @@ function initMissionAnimation() {
   );
 
   observer.observe(title);
+}
+
+function initOpenVaultMetrics() {
+  const metrics = document.querySelectorAll(".openvault-metrics .metric");
+  if (!metrics.length) return;
+  if (prefersReducedMotion || typeof gsap === "undefined") {
+    metrics.forEach((m) => {
+      m.style.opacity = "1";
+      m.style.transform = "none";
+    });
+    return;
+  }
+
+  gsap.from(metrics, {
+    opacity: 0,
+    y: 12,
+    duration: 0.3,
+    delay: 0.1,
+    stagger: 0.05,
+    ease: "power2.out"
+  });
 }

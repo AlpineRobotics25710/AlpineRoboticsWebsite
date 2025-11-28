@@ -211,6 +211,11 @@
   margin-bottom: var(--space-2);
 }
 
+.openvault-metrics .metric {
+  opacity: 1;
+  transform: none;
+}
+
 /* Impact section layout */
 .ov-impact {
   display: grid;

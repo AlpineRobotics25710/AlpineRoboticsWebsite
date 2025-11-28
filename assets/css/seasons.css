@@ -107,6 +107,12 @@
   max-width: var(--season-max-text);
   line-height: 1.65;
   color: var(--text-secondary);
+  margin-top: 0;
+}
+
+.season-block .section-title--sub + .season-text {
+  /* margin-top: var(--space-1); */
+  margin-bottom: var(--space-2);
 }
 
 .season-two-col {
