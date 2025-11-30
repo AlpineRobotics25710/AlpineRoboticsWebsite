@@ -129,7 +129,7 @@ export const team = {
       name: "Saharsh N",
       role: "Mentor",
       image: "../images/team/saharsh.png",
-      summary: "Cad and Design Guidance and Assistance",
+      summary: "CAD and Design Guidance and Assistance",
       bio: "Saharsh mentors students on strategical design, crucial CAD concepts, and important design fundamentals while sharing his engineering experience.",
       funfact: "to be added"
     },
