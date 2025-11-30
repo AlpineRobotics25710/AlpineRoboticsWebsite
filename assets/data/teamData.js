@@ -26,9 +26,9 @@ export const team = {
       image: "../images/team/prathyush.png",
       summary: "TeleOp controls, mechanism automation, and autonomous assists.",
       bio: "Prathyush focuses on TeleOp command mapping and automated sequences. He pairs with build to keep code and mechanisms aligned.",
-      email: "prathyush@example.com",
-      funfact: "tbd - Writes macros for everything : including snacks.",
-      links: { github: "https://github.com/example-prathyush" }
+      email: "prathyushyeturi@gmail.com",
+      funfact: "AKA Big Java",
+      // links: { github: "https://github.com/example-prathyush" }
     }
   ],
   leads: [
@@ -65,7 +65,7 @@ export const team = {
       image: "../images/team/ashwin.png",
       summary: "Aids in designing core programming features on the robot.",
       bio: "Ashwin is an experienced programmer who helps with auton routines, aids in designing core programming features like waypointing, as well as PID/FF tuning.",
-      funfact: "tbd - Knows every pit tool by weight."
+      funfact: "tbd"
     },
     {
       name: "Shishir M",
@@ -89,7 +89,7 @@ export const team = {
       image: "../images/team/sanjana.png",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
       bio: "Sanjana joined this season to learn programming and mechanical skills. She helps with pit checks, drivetrain upkeep, and quick fixes.",
-      funfact: "tbd - Knows every pit tool by weight."
+      funfact: "tbd"
     },
     {
       name: "Saanvi A",
@@ -97,7 +97,7 @@ export const team = {
       image: "../images/team/saanvi.png",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
       bio: "Saanvi joined this season to learn mechanical design and build. She helps with pit checks, drivetrain upkeep, and quick fixes.",
-      funfact: "tbd - Knows every pit tool by weight."
+      funfact: "tbd"
     },
     {
       name: "Sahasra",
@@ -105,7 +105,7 @@ export const team = {
       image: "../images/team/sahasra.png",
       summary: "Pit checks, drivetrain upkeep, quick fixes.",
       bio: "Sahara joined this season to learn mechanical design and build. She helps with pit checks, drivetrain upkeep, and quick fixes.",
-      funfact: "tbd - Knows every pit tool by weight."
+      funfact: "tbd"
     }
   ],
   mentors: [
@@ -123,6 +123,14 @@ export const team = {
       image: "../images/team/coach-ashish.png",
       summary: "Mechanical guidance, safety, season planning.",
       bio: "Coach Ashish provides mechanical guidance, safety oversight, and season planning while mentoring students on design and build processes.",
+      funfact: "to be added"
+    },
+    {
+      name: "Saharsh N",
+      role: "Mentor",
+      image: "../images/team/saharsh.png",
+      summary: "Cad and Design Guidance and Assistance",
+      bio: "Saharsh mentors students on strategical design, crucial CAD concepts, and important design fundamentals while sharing his engineering experience.",
       funfact: "to be added"
     },
     {
