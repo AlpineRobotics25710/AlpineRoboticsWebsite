@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seasons - Alpine Robotics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/GreenAlpineLogo.png">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/seasons.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0RD2S0XPZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-J0RD2S0XPZ');
+  </script>
+</head>
+
+<body data-theme="light">
+  <div class="page">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="nav__brand" href="../index.html">
+          <img src="../images/GreenAlpineLogo.png" alt="Alpine Robotics logo" width="52" height="52" decoding="async">
+        </a>
+        <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+          aria-controls="nav-menu" role="button" tabindex="0">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__center">
+            <nav class="nav__links" aria-label="Primary">
+              <a class="nav__link" href="../index.html">Home</a>
+              <a class="nav__link nav__link--active" href="./seasons.html">Seasons</a>
+              <a class="nav__link" href="./openvault.html">OpenVault</a>
+              <a class="nav__link" href="./team.html">Meet the Team</a>
+              <a class="nav__link" href="./gallery.html">Gallery</a>
+              <a class="nav__link" href="./sponsors.html">Sponsors</a>
+            </nav>
+          </div>
+          <div class="nav__right">
+            <button class="theme-toggle" type="button" aria-label="Toggle light or dark mode">
+              <span class="theme-toggle__sun" aria-hidden="true">☀️</span>
+              <span class="theme-toggle__moon" aria-hidden="true">🌙</span>
+            </button>
+            <a class="nav__cta" href="mailto:alpineroboticsftc@gmail.com">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <header class="page-heading">
+        <div class="container">
+          <span class="pill">FTC Seasons</span>
+          <h1 class="page-heading__title">Seasons & Engineering Breakdown</h1>
+          <p class="page-heading__lead">Explore our current DECODE season and last year's Into the Deep run: strategy,
+            robots, and engineering takeaways.</p>
+        </div>
+      </header>
+
+      <section class="section seasons-section">
+        <div class="container">
+          <div class="season-tabs" role="tablist" aria-label="Season tabs">
+            <button class="season-tab is-active" role="tab" aria-selected="true" aria-controls="season-2025"
+              id="tab-2025">DECODE (2025–26)</button>
+            <button class="season-tab" role="tab" aria-selected="false" aria-controls="season-2024" id="tab-2024">Into
+              the Deep (2024–25)</button>
+            <span class="season-tabs__indicator" aria-hidden="true"></span>
+          </div>
+
+          <div class="season-panels">
+            <div class="season-panel is-active is-visible" role="tabpanel" id="season-2025" aria-labelledby="tab-2025">
+              <div class="season-block">
+                <div>
+                  <h2 class="section-title">Overview</h2>
+                  <p class="section-subtitle">Game summary, reveal, goals, and scoring targets.</p>
+                </div>
+                <h3 class="section-title section-title--sub">Game Summary</h3>
+                <p class="season-text">Alliance robots score coded props, cycle game pieces, and trigger endgame
+                  multipliers to maximize ranking points.</p>
+                <div class="season-overview-grid">
+                  <div class="season-overview-main">
+                    <div class="video-embed">
+                      <iframe src="https://www.youtube.com/embed/LCqWA6gSCXA?rel=0" title="DECODE FTC Game Reveal"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <aside class="season-overview-aside">
+                    <article class="season-card">
+                      <h4>Alliance Goals</h4>
+                      <ul class="season-list">
+                        <li>Reliable auton scoring + park</li>
+                        <li>Fast mid/high cycles in TeleOp</li>
+                        <li>Coordinate endgame for RP boosts</li>
+                        <li>Target top-10 event ranking</li>
+                      </ul>
+                    </article>
+                    <article class="season-card">
+                      <h4>Scoring Targets</h4>
+                      <ul class="season-list">
+                        <li>Auton: 40-55 points</li>
+                        <li>TeleOp: 70-90 points</li>
+                        <li>Endgame: 40-60 points</li>
+                        <li>Total match goal: 150-180</li>
+                      </ul>
+                    </article>
+                  </aside>
+                </div>
+
+                <div class="season-block-inner">
+                  <div>
+                    <h3 class="section-title section-title--sub">Game Strategy</h3>
+                    <p class="section-subtitle">Auton, TeleOp, and Endgame approach for DECODE.</p>
+                  </div>
+                  <div class="season-three-col">
+                    <div class="season-strategy-col">
+                      <h4>Auton</h4>
+                      <ul>
+                        <li>Goal: consistent park + 2–3 scored game pieces</li>
+                        <li>Sensors: AprilTags, IMU, distance sensors</li>
+                        <li>Path: preplanned + on-the-fly corrections</li>
+                      </ul>
+                    </div>
+                    <div class="season-strategy-col">
+                      <h4>TeleOp</h4>
+                      <ul>
+                        <li>Cycle strategy: rapid intake + score high</li>
+                        <li>Subsystem use: intake + lift + manipulator</li>
+                        <li>Driver practice: weekly drills + cycle timing</li>
+                      </ul>
+                    </div>
+                    <div class="season-strategy-col">
+                      <h4>Endgame</h4>
+                      <ul>
+                        <li>Scoring breakdown: endgame multipliers first</li>
+                        <li>Priorities: secure RP, safe park, bonus tasks</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="season-block">
+                <div>
+                  <h2 class="section-title">Starter Bot</h2>
+                  <p class="section-subtitle">Initial build to validate geometry and controls.</p>
+                </div>
+                <div class="season-robot-wrap">
+                  <div class="season-robot-image">Starter bot image placeholder</div>
+                  <div class="season-two-col">
+                    <div class="season-box">
+                      <h4>Starter bot overview</h4>
+                      <p>Built to validate intake geometry and slide stability before committing to the final design.
+                      </p>
+                    </div>
+                    <div class="season-box">
+                      <h4>What we learned</h4>
+                      <ul class="season-list">
+                        <li>Faster prototyping for intake funnels</li>
+                        <li>Slide bracing reduced wobble</li>
+                        <li>Early CV tests improved auton consistency</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="season-block">
+                <div>
+                  <h2 class="section-title">Main Robot</h2>
+                  <p class="section-subtitle">Final competition robot for DECODE.</p>
+                </div>
+                <div class="h-timeline" aria-label="Season timeline">
+                  <div class="h-timeline__track"></div>
+                  <div class="h-timeline__progress"></div>
+                  <div class="h-timeline__items">
+                    <div class="h-timeline__item">
+                      <span class="h-timeline__dot"></span>
+                      <span class="h-timeline__label">Brainstorm</span>
+                    </div>
+                    <div class="h-timeline__item">
+                      <span class="h-timeline__dot"></span>
+                      <span class="h-timeline__label">CAD</span>
+                    </div>
+                    <div class="h-timeline__item">
+                      <span class="h-timeline__dot"></span>
+                      <span class="h-timeline__label">Final Design</span>
+                    </div>
+                    <div class="h-timeline__item">
+                      <span class="h-timeline__dot"></span>
+                      <span class="h-timeline__label">Build / Cut</span>
+                    </div>
+                    <div class="h-timeline__item">
+                      <span class="h-timeline__dot"></span>
+                      <span class="h-timeline__label">Assemble</span>
+                    </div>
+                    <div class="h-timeline__item">
+                      <span class="h-timeline__dot"></span>
+                      <span class="h-timeline__label">Program &amp; Tune</span>
+                    </div>
+                    <div class="h-timeline__item">
+                      <span class="h-timeline__dot"></span>
+                      <span class="h-timeline__label">Test &amp; Iterate</span>
+                    </div>
+                    <div class="h-timeline__item">
+                      <span class="h-timeline__dot"></span>
+                      <span class="h-timeline__label">Meet Ready</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="season-robot-wrap">
+                  <div class="robot-layout">
+                    <div class="robot-col">
+                      <div class="season-box">
+                        <h4>Drivetrain</h4>
+                        <p>6WD, high-traction; tuned for stability and fast turning.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Intake</h4>
+                        <p>Fast capture with anti-jam geometry for consistent cycles.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Lift / Slide</h4>
+                        <p>Stable, braced slides with smooth extension and controlled speed.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Manipulator</h4>
+                        <p>Precise placement on mid/high scoring nodes.</p>
+                      </div>
+                    </div>
+
+                    <div class="season-robot-image">Picture of main robot isn't available yet... <br> Check out our
+                      timeline for more info!</div>
+
+                    <div class="robot-col">
+                      <div class="season-box">
+                        <h4>Sensors</h4>
+                        <p>Distance sensors, camera with AprilTags, and odometry for auton corrections.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Software Architecture</h4>
+                        <p>State machines, CV pipelines, PedroPathing/RoadRunner for pathing and reliability.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Control Theory</h4>
+                        <p>PID/FF tuning, motion profiling, and safety interlocks for consistent control.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Telemetry</h4>
+                        <p>Live cycle timing, subsystem health, and logging to refine strategy.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="season-block">
+                <div>
+                  <h2 class="section-title">Engineering Achievements</h2>
+                  <p class="section-subtitle">Key engineering progress and learnings.</p>
+                </div>
+                <div class="season-three-col">
+                  <div class="season-box">
+                    <h4>Iterations</h4>
+                    <p>CAD iterations on intake rollers and slide carriage to improve reliability.</p>
+                  </div>
+                  <div class="season-box">
+                    <h4>Failures & Fixes</h4>
+                    <p>Addressed chain skipping, refined wiring harness routing, and improved slide guides.</p>
+                  </div>
+                  <div class="season-box">
+                    <h4>Lessons Learned</h4>
+                    <p>Earlier driver practice blocks, structured testing plans, and telemetry-driven tuning.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="season-panel" role="tabpanel" id="season-2024" aria-labelledby="tab-2024" hidden>
+              <div class="season-block">
+                <div>
+                  <h2 class="section-title">Overview</h2>
+                  <p class="section-subtitle">Game summary, reveal, goals, and scoring targets.</p>
+                </div>
+                <h3 class="section-title section-title--sub">Game Summary</h3>
+                <p class="season-text">Into the Deep challenged alliances to score samples, manage specimens, and
+                  secure ascent bonuses.</p>
+                <div class="season-overview-grid">
+                  <div class="season-overview-main">
+                    <div class="video-embed">
+                      <iframe src="https://www.youtube.com/embed/ewlDPvRK4U4?rel=0"
+                        title="Into the Deep FTC Game Reveal" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <aside class="season-overview-aside">
+                    <article class="season-card">
+                      <h4>Alliance Goals</h4>
+                      <ul class="season-list">
+                        <li>Consistent auton sample scores</li>
+                        <li>Efficient TeleOp cycles on mid</li>
+                        <li>Secure endgame climbs</li>
+                        <li>Target elimination rounds</li>
+                      </ul>
+                    </article>
+                    <article class="season-card">
+                      <h4>Scoring Targets</h4>
+                      <ul class="season-list">
+                        <li>Auton: 30-45 points</li>
+                        <li>TeleOp: 60-80 points</li>
+                        <li>Endgame: 30-50 points</li>
+                      </ul>
+                    </article>
+                  </aside>
+                </div>
+
+                <div class="season-block-inner">
+                  <div>
+                    <h3 class="section-title section-title--sub">Game Strategy</h3>
+                    <p class="section-subtitle">Auton, TeleOp, and Endgame approach for Into the Deep.</p>
+                  </div>
+                  <div class="season-three-col">
+                    <div class="season-strategy-col">
+                      <h4>Auton</h4>
+                      <ul>
+                        <li>Goal: reliable sample score + park</li>
+                        <li>Sensors: IMU + distance</li>
+                        <li>Path: straight + cautious turns</li>
+                      </ul>
+                    </div>
+                    <div class="season-strategy-col">
+                      <h4>TeleOp</h4>
+                      <ul>
+                        <li>Cycle: mid-level focus</li>
+                        <li>Subsystems: intake + lift + bucket</li>
+                        <li>Practice: weekly drive blocks</li>
+                      </ul>
+                    </div>
+                    <div class="season-strategy-col">
+                      <h4>Endgame</h4>
+                      <ul>
+                        <li>Ascent focus for points</li>
+                        <li>Secure RP tasks</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                            <div class="season-block">
+                <section class="robot-section robot-section--itd">
+                  <h3 class="section-title">Main Robot</h3>
+                  <p class="section-subtitle">Competition robot for Into the Deep.</p>
+
+                  <div class="robot-main-layout">
+                    <div class="robot-main-column">
+                      <div class="season-box">
+                        <h4>Drivetrain</h4>
+                        <p>4 Wheel Mecanum Drive tuned for omnidirectional movement.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Intake</h4>
+                        <p>Sample capture with guided funneling to reduce jams.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Lift / Slide</h4>
+                        <p>Linear slides with reinforced bracing for smooth lifts.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Outtake</h4>
+                        <p>Claw-style outtake for reliable specimen + sample scoring.</p>
+                      </div>
+                    </div>
+
+                    <div class="robot-main-column">
+                      <div class="robot-media">
+                        <h3 class="robot-media__title">Robot Media — Into the Deep</h3>
+                        <div class="robot-media__grid">
+                          <article class="robot-media__item">
+                            <h4 class="robot-media__label">TeleOp &amp; General Capabilities</h4>
+                            <div class="video-embed">
+                              <iframe
+                                src="https://www.youtube.com/embed/uH1st5iBRE4"
+                                title="TeleOp &amp; General Capabilities"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                              ></iframe>
+                            </div>
+                          </article>
+
+                          <article class="robot-media__item">
+                            <h4 class="robot-media__label">5+0 Autonomous (5 Specimens + Park)</h4>
+                            <div class="video-embed">
+                              <iframe
+                                src="https://www.youtube.com/embed/zGA60J8hQ3o"
+                                title="5+0 Autonomous (5 Specimens + Park)"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                              ></iframe>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="robot-main-column">
+                      <div class="season-box">
+                        <h4>Sensors</h4>
+                        <p>2 Wheel Odometry + IMU for autonomous pathing correction.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Software Architecture</h4>
+                        <p>Finite state control, basic CV trials, and trajectory planning.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Control Theory</h4>
+                        <p>PID/FF tuning and motion profiling for consistent control.</p>
+                      </div>
+                      <div class="season-box">
+                        <h4>Telemetry</h4>
+                        <p>Live cycle timing, subsystem health, and logging to refine strategy.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="season-block">
+                <div>
+                  <h2 class="section-title">Engineering Achievements</h2>
+                  <p class="section-subtitle">Key engineering progress and learnings.</p>
+                </div>
+                <div class="season-three-col">
+                  <div class="season-box">
+                    <h4>Iterations</h4>
+                    <p>Multiple intake redesigns for sample retention.</p>
+                  </div>
+                  <div class="season-box">
+                    <h4>Failures & Fixes</h4>
+                    <p>Resolved lift binding; improved cable routing.</p>
+                  </div>
+                  <div class="season-box">
+                    <h4>Lessons Learned</h4>
+                    <p>Earlier testing blocks, better spares, and documented tuning.</p>
+                  </div>
+                </div>
+                <div class="season-download">
+                  <a class="btn btn--primary" href="../resources/ITD-engineering-portfolio.pdf" target="_blank"
+                    rel="noreferrer">
+                    Download Into the Deep Engineering Portfolio (PDF)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__content">
+        <span>Alpine Robotics â€¢ FTC Team 25710</span>
+        <span>Contact: <a href="mailto:alpineroboticsftc@gmail.com">alpineroboticsftc@gmail.com</a></span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/main.js" type="module"></script>
+  <script src="../assets/js/seasons.js" type="module"></script>
+</body>
+
+</html>
